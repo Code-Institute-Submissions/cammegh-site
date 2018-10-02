@@ -6,6 +6,7 @@ body{
     margin: 0;
     padding: 0;
     min-width: 300px;
+    font-family: "Noto Serif KR",sans-serif;
 }
 
 header{
@@ -35,6 +36,17 @@ header{
     min-height: 1px;
 }
 
+.wrapper-container{
+    margin: 1px 1px 4px;
+    float: none;
+}
+
+@media(min-width:992px){
+    .wrapper-container{
+        margin: 1px auto 4px;
+    }
+}
+
 /*-----------------------Header-*/
 .navbar{
     height: 50px;
@@ -42,7 +54,6 @@ header{
     text-align: center;
     background-color: #000000;
     color: #fafafa;
-    font-family: "Noto Serif KR",sans-serif;
     font-weight: 400;
     margin: 0;
     padding: 0;
@@ -57,10 +68,9 @@ header{
     height: 100%;
     text-decoration: none;
     color: inherit;
-    font-family: "Noto Serif FR",sans-serif;
     font-weight: 300;
     line-height: 50px;
-    font-size: 20px;
+    font-size: 19px;
     display: block;
     float: left;
     margin: auto 5px;
@@ -70,7 +80,7 @@ header{
 
 .navbar-button:hover,.navbar-button:active{
     color: #ff0000;
-    font-size: 19px;
+    font-size: 18px;
     transition: color ease-in-out 0.2s;
     transition: font-size ease-in-out 0.15s;
 }
@@ -132,7 +142,6 @@ header{
     display: block;
     text-decoration: none;
     color: #fafafa;
-    font-family: "Noto Serif KR", sans-serif;
     font-weight: 500;
     padding: 15px 0 15px 10px;
     font-size: large;
@@ -159,11 +168,27 @@ header{
     display: block;
 }
 
-.homepage-image {
+.homepage-image{
     background: url("../images/M360 oak SC.jpg") center center;
-    min-height: 200px;
+    min-height: 160px;
+    height: 42vw;
     width: 100%;
     max-width: 1000px;
     background-size: cover;
-    z-index: 5;
+    margin: 0 auto;
+}
+
+@media(min-width:1060px){
+    .homepage-image{
+        height: 445px;
+    }
+}
+
+.content-container{
+    padding: 0 10px;
+    border: solid 1px;
+    border-color: #c5c5c5;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
