@@ -176,10 +176,15 @@ header, footer{
     background: url("../images/M360 oak SC.jpg") center center;
     min-height: 160px;
     height: 42vw;
-    width: 100%;
+    width: 99%;
     max-width: 1000px;
     background-size: cover;
     margin: 0 auto;
+    border: solid 1px;
+    border-color: #c5c5c5;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+
 }
 
 @media(min-width:1060px){
@@ -215,17 +220,11 @@ header, footer{
 }
 
 .top-return{
-    margin-top: 8px;
+    margin-top: 6px;
     margin-left: 5px;
-    text-align: left;
-}
-
-.top-return a{
-    font-family: "Noto Serif KR",sans-serif;
-    font-size: medium;
-    font-weight: 300;
-    color: #fafafa;
-    text-decoration: none;
+    text-align: center;
+    display: block;
+    float: left;
 }
 
 .footer-spacer{
@@ -238,4 +237,21 @@ header, footer{
     .footer{
         position: relative;
     }
+}
+
+.footer-button{
+    font-family: "Noto Serif KR",sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: #fafafa;
+    text-decoration: none;
+    transition: color ease-in-out 0.2s;
+    transition: font-size ease-in-out 0.15s;
+}
+
+.footer-button:hover,.footer-button:active{
+    color: #b10000;
+    font-size: 17px;
+    transition: color ease-in-out 0.2s;
+    transition: font-size ease-in-out 0.15s;
 }
