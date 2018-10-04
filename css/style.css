@@ -2,6 +2,11 @@
 
 /*----------------------- General Containers */
 
+*{
+    margin: 0;
+    padding: 0;
+}
+
 body{
     margin: 0;
     padding: 0;
@@ -241,17 +246,22 @@ header, footer{
 
 .footer-button{
     font-family: "Noto Serif KR",sans-serif;
+    color: inherit;
     font-size: 18px;
     font-weight: 300;
-    color: #fafafa;
     text-decoration: none;
     transition: color ease-in-out 0.2s;
     transition: font-size ease-in-out 0.15s;
 }
 
-.footer-button:hover,.footer-button:active{
+.footer-button:hover{
     color: #b10000;
     font-size: 17px;
     transition: color ease-in-out 0.2s;
     transition: font-size ease-in-out 0.15s;
+}
+
+.can-touch .footer-button:hover{
+    color: inherit;
+    font-size: 18px;
 }
