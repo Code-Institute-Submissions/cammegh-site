@@ -52,6 +52,11 @@ header, footer{
     }
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 /*----------------------- Header */
 .navbar{
     height: 50px;
@@ -156,15 +161,15 @@ header, footer{
     transition: color ease-in-out 0.15s;
 }
 
+.dropdown-menu a:nth-child(even) {
+  background: #3a3a3a;
+}
+
 .dropdown-menu a:hover{
     color: #b10000;
     background-color: rgba(0,0,0,0.5);
     transition: background-color ease-in-out 0.15s;
     transition: color ease-in-out 0.15s;
-}
-
-.charcoal{
-    background-color: #3a3a3a;
 }
 
 /*----------------------- Main section */
@@ -182,9 +187,9 @@ header, footer{
     min-height: 160px;
     height: 42vw;
     width: 99%;
-    max-width: 1000px;
+    max-width: 996px;
     background-size: cover;
-    margin: 0 auto;
+    margin: 2px auto 5px;
     border: solid 1px;
     border-color: #c5c5c5;
     border-radius: 5px;
@@ -200,6 +205,9 @@ header, footer{
 
 .content-container{
     padding: 0 10px;
+    margin: 5px 2px;
+    padding-top: 4px;
+    padding-bottom: 5px;
     border: solid 1px;
     border-color: #c5c5c5;
     border-radius: 5px;
@@ -264,4 +272,10 @@ header, footer{
 .can-touch .footer-button:hover{
     color: inherit;
     font-size: 18px;
+}
+
+/*----------------------- Product page */
+
+.product-button{
+    min-height: 160px;
 }
