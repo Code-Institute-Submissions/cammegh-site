@@ -110,7 +110,6 @@ a{
 @media(min-width:992px){
     .logo{
         background-position: center center;
-        transition: background-position ease-in-out 0.25s;
     }
 }
 
@@ -232,6 +231,13 @@ a{
     transition: color ease-in-out 0.15s;
 }
 
+/*----------------------- Generic bits */
+
+hr{
+    width: 10%;
+    margin: 5px auto;
+}
+
 /*---------------------------------------- Main section */
 
 /*----------------------- Homepage */
@@ -278,12 +284,18 @@ a{
 
 /*----------------------- Product pages */
 
+.product-type-button{
+    min-height: 100px;
+}
+
 .product-button{
     min-height: 250px;
 }
 
-.col-12 .product-button{
-    min-height: 70px;
+@media(min-width:320px){
+    .product-button{
+        min-height: 240px;
+    }
 }
 
 @media(min-width:350px){
@@ -323,14 +335,20 @@ a{
 }
 
 @media(min-width:768px){
-    .col-12 .product-button, .product-button{
+    .product-button{
         min-height: 140px;
     }
 }
 
 @media(min-width:900px){
-    .col-12 .product-button, .product-button{
+    .product-button{
         min-height: 130px;
+    }
+}
+
+@media(min-width:1200px){
+    .product-button{
+        min-height: 140px;
     }
 }
 
