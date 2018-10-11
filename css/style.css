@@ -278,17 +278,11 @@ a{
 /*----------------------- Product page */
 
 .product-button{
-    min-height: 240px;
+    min-height: 250px;
 }
 
 .col-12 .product-button{
-    min-height: 120px;
-}
-
-@media(min-width:300px){
-    .product-button{
-        min-height: 250px;
-    }
+    min-height: 70px;
 }
 
 @media(min-width:350px){
@@ -324,9 +318,6 @@ a{
 @media(min-width:700px){
     .product-button{
         min-height: 100px;
-    }
-    .col-12 .product-button{
-        min-height: 80px;
     }
 }
 
