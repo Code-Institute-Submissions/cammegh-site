@@ -238,6 +238,24 @@ hr{
     margin: 5px auto;
 }
 
+.content-container{
+    padding: 0 10px;
+    margin: 5px 2px;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    border: solid 1px;
+    border-color: #c5c5c5;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.content-container-filler{
+    clear: both;
+    width: 100%;
+    height: 1px;
+}
+
 /*---------------------------------------- Main section */
 
 /*----------------------- Homepage */
@@ -267,18 +285,6 @@ hr{
     .homepage-image{
         height: 445px;
     }
-}
-
-.content-container{
-    padding: 0 10px;
-    margin: 5px 2px;
-    padding-top: 4px;
-    padding-bottom: 5px;
-    border: solid 1px;
-    border-color: #c5c5c5;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
 }
 
 
