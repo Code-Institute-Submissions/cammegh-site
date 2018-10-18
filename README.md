@@ -39,7 +39,7 @@ The majority of users of the Cammegh site, using their existing customer base as
 - *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork)*
 
 #### Clients page:
-- TBD what goes here. Suspect this will dictated mostly by Sales
+- TBD what goes here. Suspect this will be dictated mostly by Sales
 - *Possibly have a login feature here?*
 
 #### Contact Info page:
