@@ -73,6 +73,16 @@ img{
     margin: auto auto;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.icon{
+    max-width: 42px;
+    float: left;
+    margin: 2px 6px;
+}
+
 /*----------------------- Header */
 .navbar{
     height: 50px;
