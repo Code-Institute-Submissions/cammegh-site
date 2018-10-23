@@ -57,6 +57,18 @@ a{
     color: inherit;
 }
 
+img{
+    width: 100%;
+}
+
+.product-image{
+    max-width: 750px;
+}
+
+.middle{
+    margin: auto auto;
+}
+
 /*----------------------- Header */
 .navbar{
     height: 50px;
@@ -68,6 +80,7 @@ a{
     margin: 0;
     padding: 0;
     display: block;
+    z-index: 10;
 }
 
 .navbar-items{
@@ -198,13 +211,12 @@ a{
     position: absolute;
     background-color: #232323;
     min-width: 160px;
-    margin: 10px auto 0;
-    left: 0;
-    width: 100%;
-    text-align: left;
-}
+    margin: 50px auto 0;
+    right: 0%;
+    width: 100vw;
+    text-align: left;}
 
-.navbar-dropdown-icon:hover .dropdown-menu{
+.dropdown-menu:hover, .navbar-dropdown-icon:hover + .dropdown-menu{
     display: block;
 }
 
@@ -360,4 +372,20 @@ hr{
 
 .fine-print{
     font-size: 0.9em;
+}
+
+.top-offset-50, .top-offset-100, .top-offset-150{
+    margin-top: 0;
+}
+
+@media(min-width:992px){
+    .top-offset-50{
+        margin-top: 50px;
+    }
+    .top-offset-100{
+        margin-top: 100px;
+    }
+    .top-offset-150{
+        margin-top: 150px;
+    }
 }
