@@ -124,7 +124,7 @@ img{
 }
 
 .logo {
-    background: url("../images/cammegh logo.gif");
+    background: url("../images/cammegh_logo.gif");
     height: 46px;
     background-size: contain;
     background-repeat: no-repeat;
@@ -293,7 +293,7 @@ hr{
 }
 
 .homepage-image{
-    background: url("../images/M360 oak SC.jpg") center center;
+    background: url("../images/m360_oak_sc.jpg") center center;
     min-height: 160px;
     height: 42vw;
     width: 99%;
