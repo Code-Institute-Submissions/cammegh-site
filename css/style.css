@@ -65,6 +65,10 @@ img{
     max-width: 750px;
 }
 
+.product-content p{
+    padding: 2px 5px;
+}
+
 .middle{
     margin: auto auto;
 }
