@@ -46,3 +46,6 @@ The majority of users of the Cammegh site, using their existing customer base as
 - To include phone number, sales email and support email
 - To include Cammegh address and directions to Cammegh from Junction 9 M20, with googlemaps iframe
 - *To include social media links? NOT RECOMMENDED as not updated in forever*
+
+#### Other Functionality
+- Reduce image file sizes, and have JavaScript load high-res images in background to reduce load times.
