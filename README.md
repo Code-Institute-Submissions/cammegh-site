@@ -48,4 +48,6 @@ The majority of users of the Cammegh site, using their existing customer base as
 - *To include social media links? NOT RECOMMENDED as not updated in forever*
 
 #### Other Functionality
-- Reduce image file sizes, and have JavaScript load high-res images in background to reduce load times.
+- Reduce image file sizes to reduce load times.
+    - Use [this](http://compressimage.toolur.com/) to reduce file size
+    - Use something similar to [this](https://stackoverflow.com/questions/27934548/load-a-low-res-background-image-first-then-a-high-res-one) to load high-res files in background, then swap the image once loaded
