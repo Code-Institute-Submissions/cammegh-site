@@ -65,7 +65,7 @@ img{
     max-width: 750px;
 }
 
-.product-content p{
+.product-content p, .product-content h4{
     padding: 2px 5px;
 }
 
