@@ -91,6 +91,10 @@ img{
     margin-top: -15px;
 }
 
+li{
+    list-style: none;
+}
+
 /*----------------------- Header */
 .navbar{
     height: 50px;
@@ -410,4 +414,9 @@ hr{
     .top-offset-150{
         margin-top: 150px;
     }
+}
+
+.sic-bo-graphics{
+    background-color: black;
+    border-radius: 5px;
 }
