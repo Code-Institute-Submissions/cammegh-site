@@ -10,6 +10,16 @@ The majority of users of the Cammegh site, using their existing customer base as
 
 ## Features
 
+#### Products page:
+- Displays page
+    - Includes all available sizes, with information on them
+    - Emphasis on viewing angles, clarity of picture
+    - Includes info on orientation, LEDs, custom colours for surrounds, poles
+- Billboard Graphics page
+    - Includes all graphics that are not related to licencing
+    - Currently has multiboard graphics on this page (*may move this to licences page later*)
+
+
 ### Features Left to Implement
 
 #### Products page:
@@ -17,14 +27,9 @@ The majority of users of the Cammegh site, using their existing customer base as
 - To include links to the following pages:
     - Wheels page
         - To include all available wheels produced, with expanding boxes highlighting their features
-        - To include a link to the Wheel Builder page
+        - *Maybe have pictures of the wheels in the tiles?*
     - Displays page
-        - To include all available sizes, with information on them
-        - Emphasis on viewing angles, clarity of picture
-        - To include info on orientation, LEDs, custom colours for surrounds, poles
         - *Highlight custom surround/pole designs? (Les A/Genting)*
-    - Billboard/Graphics page
-        - Need more info as I know next to nothing about this product type
     - Licences page
         - Need more info as I know next to nothing about this product type
     - Accessories page
