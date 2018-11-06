@@ -178,11 +178,11 @@ h3{
 }
 
 .top-return{
-    margin-top: 6px;
-    margin-left: 5px;
+    height: 40px;
     text-align: center;
     display: block;
     float: left;
+    width: 65%;
 }
 
 .footer-spacer{
@@ -199,7 +199,10 @@ h3{
 }
 
 .footer-button{
+    display: block;
     font-family: "Noto Serif KR",sans-serif;
+    padding-top: 6px;
+    padding-bottom: 8px;
     color: inherit;
     font-size: 18px;
     font-weight: 300;
@@ -341,49 +344,43 @@ hr{
 
 @media(min-width:320px){
     .product-button{
-        min-height: 240px;
+        min-height: 255px;
     }
 }
 
 @media(min-width:350px){
     .product-button{
-        min-height: 210px;
+        min-height: 215px;
     }
 }
 
 @media(min-width:400px){
     .product-button{
-        min-height: 180px;
+        min-height: 190px;
     }
 }
 
 @media(min-width:450px){
     .product-button{
-        min-height: 160px;
+        min-height: 170px;
     }
 }
 
 @media(min-width:500px){
     .product-button{
-        min-height: 140px;
+        min-height: 150px;
     }
 }
 
 @media(min-width:600px){
     .product-button{
-        min-height: 120px;
-    }
-}
-
-@media(min-width:700px){
-    .product-button{
-        min-height: 100px;
+        min-height: 125px;
     }
 }
 
 @media(min-width:768px){
     .product-button{
-        min-height: 140px;
+        min-height: 145px;
     }
 }
 
@@ -395,12 +392,12 @@ hr{
 
 @media(min-width:1200px){
     .product-button{
-        min-height: 140px;
+        min-height: 145px;
     }
 }
 
 .fine-print{
-    font-size: 0.9em;
+    font-size: 0.85em;
 }
 
 .top-offset-50, .top-offset-100, .top-offset-150{
@@ -436,4 +433,33 @@ hr{
     .product-image-center-fix{
         margin-left: 110px;
     }
+}
+
+.rounded{
+    border-radius: 5px;
+}
+
+.baccarat-table{
+    display: none;
+}
+
+@media(min-width:680px){
+    .baccarat-table{
+        display: block;
+    }
+}
+
+.baccarat-table .table-cell{
+    background-color: rgb(190,115,40);
+    border: solid 1px;
+    border-color: rgb(255,200,53);
+    margin: -1px;
+}
+
+.table-cell .cell-content{
+    padding: 4px;
+}
+
+.baccarat-table .table-header{
+    color: rgb(255,200,53);
 }
