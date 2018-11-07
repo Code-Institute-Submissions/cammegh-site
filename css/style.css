@@ -98,6 +98,11 @@ li{
 h3{
     margin-bottom: 10px;
 }
+
+.rounded{
+    border-radius: 5px;
+}
+
 /*----------------------- Header */
 .navbar{
     height: 50px;
@@ -433,33 +438,4 @@ hr{
     .product-image-center-fix{
         margin-left: 110px;
     }
-}
-
-.rounded{
-    border-radius: 5px;
-}
-
-.baccarat-table{
-    display: none;
-}
-
-@media(min-width:680px){
-    .baccarat-table{
-        display: block;
-    }
-}
-
-.baccarat-table .table-cell{
-    background-color: rgb(190,115,40);
-    border: solid 1px;
-    border-color: rgb(255,200,53);
-    margin: -1px;
-}
-
-.table-cell .cell-content{
-    padding: 4px;
-}
-
-.baccarat-table .table-header{
-    color: rgb(255,200,53);
 }
