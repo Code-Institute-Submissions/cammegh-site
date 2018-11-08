@@ -103,6 +103,9 @@ h3{
     border-radius: 5px;
 }
 
+.overlay{
+    position: absolute;
+}
 /*----------------------- Header */
 .navbar{
     height: 50px;
@@ -437,5 +440,16 @@ hr{
 @media(min-width:992px){
     .product-image-center-fix{
         margin-left: 110px;
+    }
+}
+
+.lucky-symbols{
+    position: absolute;
+    margin-top: -60vw;
+}
+
+@media(min-width:992px){
+    .lucky-symbols{
+        margin-top: -600px;
     }
 }
