@@ -100,7 +100,7 @@ h3{
 }
 
 .rounded{
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .overlay{
@@ -443,13 +443,54 @@ hr{
     }
 }
 
-.lucky-symbols{
+.logo-overlay{
     position: absolute;
     margin-top: -60vw;
 }
 
 @media(min-width:992px){
-    .lucky-symbols{
+    .logo-overlay{
         margin-top: -600px;
+    }
+}
+
+.fieldset-style{
+    border: solid 1px black;
+    margin-top: 15px;
+    margin-left: -2px;
+    padding-bottom: 2px;
+    padding-left: 2px;
+}
+
+.fieldset-style-title{
+    margin: -10px 0 0 10px;
+    padding: 0 5px;
+    background-color: #f9f9f9;
+    width: 200px;
+}
+
+.legend-style{
+    text-align: right;
+}
+
+.fieldset-style p{
+    font-size: x-small;
+}
+
+@media(min-width:500px){
+    .fieldset-style p{
+        font-size: smaller;
+    }
+}
+
+@media(min-width:600px){
+    .fieldset-style p{
+        font-size: small;
+    }
+}
+
+@media(min-width:700px){
+    .fieldset-style p{
+        font-size: inherit;
     }
 }
