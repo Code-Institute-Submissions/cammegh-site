@@ -77,6 +77,10 @@ img{
     text-align: center;
 }
 
+.text-right{
+    text-align: right;
+}
+
 .icon{
     max-width: 42px;
     float: left;
@@ -213,10 +217,10 @@ h3{
 .footer-button{
     display: block;
     font-family: "Noto Serif KR",sans-serif;
-    padding-top: 6px;
+    padding-top: 10px;
     padding-bottom: 8px;
     color: inherit;
-    font-size: 18px;
+    font-size: 12px;
     font-weight: 300;
     text-decoration: none;
     transition: color ease-in-out 0.2s;
@@ -225,14 +229,63 @@ h3{
 
 .footer-button:hover{
     color: #b10000;
-    font-size: 17px;
+    font-size: 11px;
     transition: color ease-in-out 0.2s;
     transition: font-size ease-in-out 0.15s;
 }
 
 .can-touch .footer-button:hover{
     color: inherit;
-    font-size: 18px;
+    font-size: 12px;
+}
+
+@media(min-width:350px){
+    .footer-button:hover{
+        font-size: 12px;
+    }
+    .footer-button, .can-touch .footer-button:hover{
+        padding-top: 9px;
+        font-size: 13px;
+    }
+}
+
+@media(min-width:400px){
+    .footer-button:hover{
+        font-size: 13px;
+    }
+    .footer-button, .can-touch .footer-button:hover{
+        padding-top: 8px;
+        font-size: 14px;
+    }
+}
+
+@media(min-width:450px){
+    .footer-button:hover{
+        font-size: 14px;
+    }
+    .footer-button, .can-touch .footer-button:hover{
+        font-size: 15px;
+    }
+}
+
+@media(min-width:500px){
+    .footer-button:hover{
+        font-size: 15px;
+    }
+    .footer-button, .can-touch .footer-button:hover{
+        padding-top: 7px;
+        font-size: 16px;
+    }
+}
+
+@media(min-width:550px){
+    .footer-button:hover{
+        font-size: 16px;
+    }
+    .footer-button, .can-touch .footer-button:hover{
+        padding-top: 6px;
+        font-size: 17px;
+    }
 }
 
 /*----------------------- Dropdown Menu */
