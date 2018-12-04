@@ -551,3 +551,13 @@ hr{
         font-size: inherit;
     }
 }
+
+
+/*----------------------- Contact page */
+
+#map{
+    width: 96vw;
+    max-width: 968px;
+    height: 400px;
+    margin-top: 6px;
+}
