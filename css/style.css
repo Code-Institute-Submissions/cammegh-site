@@ -670,7 +670,8 @@ hr {
     height: 5px;
 }
 
-.selection-list-container {
+.selection-list-container,
+.selection-list-container-full {
     width: 100%;
     transition: width ease-in-out 0.3s;
 }
@@ -704,6 +705,10 @@ hr {
         width: 25%;
         transition: width ease-in-out 0.3s;
     }
+    .selection-list-container-full {
+        width: 50%;
+        transition: width ease-in-out 0.3s;
+    }
 }
 
 .selection-list-option span {
@@ -715,6 +720,10 @@ hr {
     border-color: #00b100;
     cursor: pointer;
     transition: border-color linear 0.15s;
+}
+
+.can-touch .selection-list-option:hover:not(.active) {
+    border-color: #b10000;
 }
 
 .selection-list form {
