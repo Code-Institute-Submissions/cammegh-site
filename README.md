@@ -25,6 +25,11 @@ The majority of users of the Cammegh site, using their existing customer base as
 - Accessories page
     - To include all available accessories sold (balls, dollies, table layouts, levellers, etc.)
 
+#### Wheel Builder page:
+- Includes render of wheel
+- Includes all major options
+- Render changes based on selections made
+
 #### Contact Info page:
 - Includes phone numbers, sales email and support email and working hours
 - Includes Cammegh address and link to Google Maps on small resolutions and Google Maps iframe on larger resolutions
@@ -39,13 +44,9 @@ The majority of users of the Cammegh site, using their existing customer base as
         - *Maybe have pictures of the wheels in the tiles?*
     - Displays page
         - *Highlight custom surround/pole designs? (Les A/Genting)*
-   
-    
+
 
 #### Wheel Builder page:
-- To include render of wheel
-- To include all major options for varieties
-- Render to change based on selections made
 - *'Other' text field for super-customisable parts (number arcs, separator finishes, turret finishes, non-veneer colours)?*
 - *Option of "standard" layouts for selection?*
 - *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork)*
