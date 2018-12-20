@@ -40,12 +40,6 @@ function activateSelections(id) {
         }
         selection.classList.add("active");
     }
-    if (base === "numberarc" && arr[1] === "37" || arr[1] === "38" || arr[1] === "39") {
-        for (i = 37; i < 40; i++) {
-            document.getElementById(`separator-${i}`).checked = false;
-        }
-        document.getElementById(`separator-${arr[1]}`).checked = true;
-    }
     var pic = document.getElementById(base);
     // Veneer finish selection
     if (document.getElementById(`${base}-finish`) !== null) {
@@ -61,34 +55,6 @@ function activateSelections(id) {
         }
         else {
             pic.src = `../images/wheel-builder/${id}-${picFinish}.png`;
-        }
-    }
-    // Separator & number arc selection
-    else if (document.getElementById(`${base}-pockets`) !== null) {
-        var picPocketsArr = document.getElementsByName(`${base}-pockets`);
-        var picPockets;
-        var pocketStyleArr = document.getElementsByName(`${base}-style`);
-        var pocketStyle;
-        for (i = 0; i < picPocketsArr.length; i++) {
-            if (picPocketsArr[i].checked === true && selection.classList.contains("active")) {
-                picPockets = picPocketsArr[i].value;
-            }
-        }
-        if (pocketStyleArr[0]) {
-            for (i = 0; i < pocketStyleArr.length; i++) {
-                if (pocketStyleArr[i].checked === true && selection.classList.contains("active")) {
-                    pocketStyle = pocketStyleArr[i].value;
-                }
-            }
-        }
-        if (picPockets === undefined) {
-            pic.src = "../images/wheel-builder/blank-background.png";
-        }
-        else if (document.getElementsByName(`${base}-style`) && pocketStyle !== undefined) {
-            pic.src = `../images/wheel-builder/${id}-${picPockets}-${pocketStyle}.png`;
-        }
-        else {
-            pic.src = `../images/wheel-builder/${id}.png`;
         }
     }
     // Ball stop selection
@@ -123,84 +89,68 @@ function activateSelections(id) {
             pic.src = `../images/wheel-builder/${id}-${turretType}.png`;
         }
     }
+    // Separator & number arc selection
+    else {
+        pocketsSelection();
+    }
 }
 
-function pocketsSelection(id, value) {
-    var checkedVal = value;
-    var allSeparators = document.getElementsByName("separator-pockets");
-    var allArcs = document.getElementsByName("numberarc-pockets");
-    for (i = 0; i < allSeparators.length; i++) {
-        allArcs[i].checked = false;
-    }
-    if (document.getElementById(`numberarc-${checkedVal}`)) {
-        document.getElementById(`numberarc-${checkedVal}`).checked = true;
-    }
-    var activeArcs = document.getElementsByClassName("numberarc selection-list-option active");
-    if (activeArcs[0]) {
-        var activeArcsID = activeArcs[0].id.split("-");
-        if (activeArcsID[1] === checkedVal) {
-            document.getElementById(`separator-${checkedVal}`).checked = true;
-        }
-        else {
-            document.getElementById(`separator-${activeArcsID[1]}`).checked = true;
+function pocketsSelection() {
+    var pocketVals = document.getElementsByName(`numberarc-pockets`);
+    var pocketsVal;
+    for (i = 0; i < 3; i++) {
+        document.getElementsByClassName(`numberarc-pockets arc-container`)[i].classList.remove(`active`);
+        if (pocketVals[i].checked === true) {
+            pocketsVal = pocketVals[i].value;
+            document.getElementById(`numberarc-pockets-${pocketsVal}`).classList.add(`active`);
         }
     }
-    var assocArcDiv = document.getElementById(`numberarc-pockets-${checkedVal}`);
-    var activeArcDiv = document.getElementsByClassName("numberarc-pockets arc-container active");
-    while (activeArcDiv[0]) {
-        activeArcDiv[0].classList.remove("active");
+    var arcSelection = document.getElementsByClassName(`numberarc selection-list-option active`)[0];
+    var sepSelection = document.getElementsByClassName(`separator selection-list-option active`)[0];
+    var arcId;
+    var arcPockets;
+    var sepId;
+    var sepStyle;
+    var arcPic = document.getElementById(`numberarc`);
+    var sepPic = document.getElementById(`separator`);
+    if (arcSelection) {
+        arcId = arcSelection.id;
+        arcPockets = arcSelection.id.split("-")[1];
     }
-    if (assocArcDiv) {
-        assocArcDiv.classList.add("active");
-    }
-    // Separator & number arc selection
-    var arr = id.split("-");
-    var base = arr[0];
-    var possSelections = document.getElementsByClassName(`${base} selection-list-option active`);
-    var selection = possSelections[0];
-    if (selection) {
-        var selectionId = selection.id;
-    }
-    var pic = document.getElementById(base);
-    if (document.getElementById(`${base}-pockets`) !== null) {
-        var picPocketsArr = document.getElementsByName(`${base}-pockets`);
-        var picPockets;
-        var pocketStyleArr = document.getElementsByName(`${base}-style`);
-        var pocketStyle;
-        for (i = 0; i < picPocketsArr.length; i++) {
-            if (selection && picPocketsArr[i].checked === true && selection.classList.contains("active")) {
-                picPockets = picPocketsArr[i].value;
+    if (sepSelection) {
+        sepId = sepSelection.id;
+        var sepStyles = document.getElementsByName(`separator-style`);
+        for (i = 0; i < 2; i++) {
+            if (sepStyles[i].checked === true) {
+                sepStyle = sepStyles[i].value;
             }
         }
-        if (pocketStyleArr[0]) {
-            for (i = 0; i < pocketStyleArr.length; i++) {
-                if (selection && pocketStyleArr[i].checked === true && selection.classList.contains("active")) {
-                    pocketStyle = pocketStyleArr[i].value;
-                }
-            }
-        }
-        if (picPockets === undefined) {
-            pic.src = "../images/wheel-builder/blank-background.png";
-        }
-        else if (document.getElementsByName(`${base}-style`) && pocketStyle !== undefined) {
-            pic.src = `../images/wheel-builder/${selectionId}-${picPockets}-${pocketStyle}.png`;
-        }
+    }
+    if (arcSelection && sepSelection) {
+        arcPic.src = `../images/wheel-builder/${arcId}.png`;
+        sepPic.src = `../images/wheel-builder/${sepId}-${arcPockets}-${sepStyle}.png`;
+    }
+    else if (arcSelection && !sepSelection) {
+        arcPic.src = `../images/wheel-builder/${arcId}.png`;
+        sepPic.src = `../images/wheel-builder/blank-background.png`;
+    }
+    else if (sepSelection && !arcSelection) {
+        arcPic.src = `../images/wheel-builder/blank-background.png`;
+        sepPic.src = `../images/wheel-builder/${sepId}-${pocketsVal}-${sepStyle}.png`;
+    }
+    else {
+        arcPic.src = `../images/wheel-builder/blank-background.png`;
+        sepPic.src = `../images/wheel-builder/blank-background.png`;
     }
 }
 
 function turretSelection(name, value) {
-    var base = name.slice(0, name.length - 5);
+    var base;
+    finishSelection(name, value);
     var checkedVal = value;
     var allTurrets = document.getElementsByClassName(base);
     var possTurrets = [];
-    var selection = document.getElementsByClassName("turret selection-list-option active")[0];
     var pic = document.getElementById(base);
-    if (selection) {
-        var selectionId = selection.id;
-        if (selection.classList.contains(value)) {
-            pic.src = `../images/wheel-builder/${selectionId}-${value}.png`;
-        }
-    }
     for (i = 0; i < allTurrets.length; i++) {
         if (allTurrets[i].classList.contains(checkedVal)) {
             possTurrets.push(allTurrets[i]);
