@@ -68,7 +68,7 @@
                             <img src="../images/wheel-builder/blank-background.png" id="cone" alt="Cone Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="numberarc" alt="Number Arc Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="separator" alt="Separator Layer" class="wheel-builder-preview">
-                            <img src="../images/wheel-builder/blank-background.png" id="balltrack" alt="Inner Bowl Layer" class="wheel-builder-preview">
+                            <img src="../images/wheel-builder/blank-background.png" id="balltrack" alt="Balltrack Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="ballstops" alt="Ball Stops Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="outerbowl" alt="Outer Bowl Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="toprim" alt="Top Rim Layer" class="wheel-builder-preview">
@@ -162,7 +162,7 @@
                                 <div class="content-container-filler"></div>
                             </div>
                             <div onclick="activateTabs(this.id)" id="balltrack-tab-small" class="col-12 hidden-md selection-tab">
-                                <span>Inner Bowl</span>
+                                <span>Balltrack</span>
                             </div>
                             <div id="balltrack-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
@@ -323,9 +323,9 @@
                                 <form id="numberarc-pockets" action="POST">
                                     <span>Sequence:</span>
                                     <div>
-                                        <input onclick="pocketsSelection(this.value)" id="numberarc-37" type="radio" name="numberarc-pockets" value="37" checked><span>Single Zero</span>
-                                        <input onclick="pocketsSelection(this.value)" id="numberarc-38" type="radio" name="numberarc-pockets" value="38"><span>Double Zero</span>
-                                        <input onclick="pocketsSelection(this.value)" id="numberarc-39" type="radio" name="numberarc-pockets" value="39"><span>Triple Zero</span>
+                                        <input onclick="pocketsSelection()" id="numberarc-37" type="radio" name="numberarc-pockets" value="37" checked><span>Single Zero</span>
+                                        <input onclick="pocketsSelection()" id="numberarc-38" type="radio" name="numberarc-pockets" value="38"><span>Double Zero</span>
+                                        <input onclick="pocketsSelection()" id="numberarc-39" type="radio" name="numberarc-pockets" value="39"><span>Triple Zero</span>
                                     </div>
                                 </form>
                                 <div id="numberarc-pockets-37" class="numberarc-pockets arc-container active">
@@ -365,7 +365,7 @@
                                 <div id="numberarc-pockets-38" class="numberarc-pockets arc-container">
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38-m2" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-38a-m2" class="col-12 numberarc selection-list-option">
                                                 <span>Standard American Sequence, Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -373,7 +373,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38-m5" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-38e-m5" class="col-12 numberarc selection-list-option">
                                                 <span>Standard European Sequence, Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -381,7 +381,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38-m6" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-38b-m6" class="col-12 numberarc selection-list-option">
                                                 <span>European Variant (26 - 00 - 0 - 32), Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -389,7 +389,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38-m7" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-38b-m7" class="col-12 numberarc selection-list-option">
                                                 <span>European Variant (26 - 0 - 00 - 32), Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -399,12 +399,12 @@
                                 <div id="numberarc-pockets-39" class="numberarc-pockets arc-container">
                                     <div class="selection-list-option-container">
                                         <p class="fine-print">Please be aware that all following Number Arcs are examples only as Triple Zero Number Arcs are specific to the customer. Choosing a TZ Number Arc set usually increases the lead time by 1-2 weeks.<br>Please specify
-                                            in the form below what sequence you would like and, in the case of a symbol instead of the triple zero, upload a picture of your requested symbol in either pdf or jpeg format.</p>
+                                            in the form in the 'Review' tab what sequence you would like and, in the case of a symbol instead of the triple zero, upload a picture of your requested symbol in either pdf or jpeg format.</p>
                                         <div class="content-container-filler"></div>
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39-m15" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-39ss-m15" class="col-12 numberarc selection-list-option">
                                                 <span>Las Vegas Sands</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -412,7 +412,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39-m16" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-39ss-m16" class="col-12 numberarc selection-list-option">
                                                 <span>MGM New York NY</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -420,7 +420,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39-m21" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-39ss-m21" class="col-12 numberarc selection-list-option">
                                                 <span>Excalibur Las Vegas</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -428,7 +428,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39-m29" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" id="numberarc-39sd-m29" class="col-12 numberarc selection-list-option">
                                                 <span>Carnival Cruise Lines</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -442,20 +442,11 @@
                             </div>
                             <div id="separator-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
-                                <form id="separator-pockets" action="POST">
-                                    <span>Number of Pockets:</span>
-                                    <div>
-                                        <input onclick="pocketsSelection(this.id,this.value)" id="separator-37" type="radio" name="separator-pockets" value="37" checked><span>37 (Single Zero)</span>
-                                        <input onclick="pocketsSelection(this.id,this.value)" id="separator-38" type="radio" name="separator-pockets" value="38"><span>38 (Double Zero)</span>
-                                        <input onclick="pocketsSelection(this.id,this.value)" id="separator-39" type="radio" name="separator-pockets" value="39"><span>39 (Triple Zero)</span>
-                                    </div>
-                                </form>
-                                <div class="content-container-filler"></div>
                                 <form id="separator-style" action="POST">
                                     <span>Separator Style:</span>
                                     <div>
-                                        <input onclick="pocketsSelection(this.id,this.value)" id="separator-dr" type="radio" name="separator-style" value="dr" checked><span>Double Radius</span>
-                                        <input onclick="pocketsSelection(this.id,this.value)" id="separator-sc" type="radio" name="separator-style" value="sc"><span>Scalloped</span>
+                                        <input onclick="pocketsSelection()" id="separator-dr" type="radio" name="separator-style" value="dr" checked><span>Double Radius</span>
+                                        <input onclick="pocketsSelection()" id="separator-sc" type="radio" name="separator-style" value="sc"><span>Scalloped</span>
                                     </div>
                                 </form>
                                 <div class="content-container-filler"></div>
@@ -644,6 +635,33 @@
                             </div>
                             <div onclick="activateTabs(this.id)" id="review-tab-small" class="col-12 hidden-md selection-tab">
                                 <span>Review</span>
+                            </div>
+                            <div id="review-selection" class="col-12 selection-list">
+                                <div class="content-container-filler"></div>
+                                <div class="col-12 selection-list-container">
+                                    <div class="selection-list-option-container">
+                                        <div class="col-12 selection-list-total">
+                                            <p>Your selections:</p>
+                                            <p>Top Rim: <span class="toprim-selection">somebody</span></p>
+                                            <p>Balltrack: <span class="balltrack-selection">once</span></p>
+                                            <p>Cone: <span class="cone-selection">told</span></p>
+                                            <p>Outer Bowl: <span class="outerbowl-selection">me</span></p>
+                                            <p>Number Arcs: <span class="numberarc-selection">the</span></p>
+                                            <p>Separator: <span class="separator-selection">world</span></p>
+                                            <p>Turret: <span class="turret-selection">was</span></p>
+                                            <p>Ball Stops: <span class="ballstops-selection">gonna</span></p>
+                                            <p>Power Supply: <span class="psu-selection">roll me</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="content-container-filler"></div>
+                                </div>
+                                <div class="col-12 selection-list-container">
+                                    <div class="selection-list-option-container">
+                                        <div class="col-12 submission-form">
+                                            <p>Help me...</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="content-container-filler"></div>
