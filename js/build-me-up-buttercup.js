@@ -89,6 +89,10 @@ function activateSelections(id) {
             pic.src = `../images/wheel-builder/${id}-${turretType}.png`;
         }
     }
+    // Power supply selection
+    else if (possSelections[0] && possSelections[0].classList.contains((`psu`))) {
+        pic.src = `../images/wheel-builder/${possSelections[0].id}.png`;
+    }
     // Separator & number arc selection
     else {
         pocketsSelection();
@@ -145,8 +149,11 @@ function pocketsSelection() {
 }
 
 function turretSelection(name, value) {
-    var base;
-    finishSelection(name, value);
+    var base = name.split("-")[0];
+    var selection = document.getElementsByClassName(`${base} selection-list-option active`)[0];
+    if (selection && selection.classList.contains(value)) {
+        finishSelection(name, value);
+    }
     var checkedVal = value;
     var allTurrets = document.getElementsByClassName(base);
     var possTurrets = [];
@@ -170,4 +177,93 @@ function finishSelection(name, value) {
         var selectionId = selection.id;
         pic.src = `../images/wheel-builder/${selectionId}-${value}.png`;
     }
+}
+
+function reviewFill() {
+    var reviewSpans = [];
+    var spanIds = [];
+    var active
+    var spans = document.getElementsByTagName(`span`);
+    for (i = 0; i < spans.length; i++) {
+        if (spans[i].hasAttribute(`data-id`)) {
+            reviewSpans.push(spans[i]);
+            spanIds.push(spans[i].dataset.id);
+        }
+    }
+    var dataIds = [];
+    for (i = 0; i < spanIds.length; i++) {
+        var selection = document.getElementsByClassName(`${spanIds[i]} selection-list-option active`)[0];
+        if (selection) {
+            // Deals with lacquered sections that have matt or glass finish
+            if (i < 4) {
+                var finishSelected;
+                var finishes = document.getElementsByName(`${spanIds[i]}-finish`);
+                for (j = 0; j < finishes.length; j++) {
+                    if (finishes[j].checked === true) {
+                        var checkedVal = finishes[j].value;
+                        finishSelected = oneCap(checkedVal);
+                    }
+                }
+                dataIds.push(`${selection.dataset.id}, ${finishSelected} Finish`)
+            }
+            // Deals with separators and number arc quirks
+            else if (spanIds[i] === "separator") {
+                var styleSelected;
+                var styles = document.getElementsByName(`${spanIds[i]}-style`);
+                for (j = 0; j < styles.length; j++) {
+                    if (styles[j].checked === true) {
+                        styleSelected = styles[j].dataset.value;
+                    }
+                }
+                dataIds.push(`${styleSelected}, ${selection.dataset.id}`);
+            }
+            // Deals with turret quirks
+            else if (spanIds[i] === "turret") {
+                var turTyps = document.getElementsByName(`turret-type`);
+                var turTypVal;
+                for (j = 0; j < turTyps.length; j++) {
+                    if (turTyps[j].checked === true) {
+                        turTypVal = turTyps[j].value;
+                    }
+                }
+                var turTypId = oneCap(turTypVal);
+                if (selection && selection.classList.contains(turTypVal)) {
+                    dataIds.push(`${selection.dataset.id}, ${turTypId}`);
+                }
+                else {
+                    var turSrcArr = document.getElementById("turret").src.split("/");
+                    var turStyleArr = turSrcArr[turSrcArr.length - 1].split("-");
+                    var turStyle = turStyleArr[turStyleArr.length - 1];
+                    turStyle = oneCap(turStyle.slice(0, turStyle.length - 4));
+                    dataIds.push(`${turStyle}, ${selection.dataset.id}`);
+                }
+            }
+            // Deals with ballstop quantities
+            else if (spanIds[i] === "ballstops") {
+                var qtySelected;
+                var qtys = document.getElementsByName(`${spanIds[i]}-qty`);
+                for (j = 0; j < qtys.length; j++) {
+                    if (qtys[j].checked === true) {
+                        qtySelected = qtys[j].value;
+                    }
+                }
+                dataIds.push(`${selection.dataset.id}, x${qtySelected}`);
+            }
+            // Deals with everything else
+            else {
+                dataIds.push(selection.dataset.id);
+            }
+        }
+        // If a section does not have a selection
+        else {
+            dataIds.push("Not selected");
+        }
+        // Prints the selections in a user-friendly format to the webpage
+        reviewSpans[i].innerHTML = dataIds[i];
+    }
+}
+
+// Small function that capitalises the first letter of a string
+function oneCap(string) {
+    return string.slice(0, 1).toUpperCase() + string.slice(1);
 }
