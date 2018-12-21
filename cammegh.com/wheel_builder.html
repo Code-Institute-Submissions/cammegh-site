@@ -73,6 +73,7 @@
                             <img src="../images/wheel-builder/blank-background.png" id="outerbowl" alt="Outer Bowl Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="toprim" alt="Top Rim Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="turret" alt="Turret Layer" class="wheel-builder-preview">
+                            <img src="../images/wheel-builder/blank-background.png" id="psu" alt="Power Supply Layer" class="wheel-builder-preview">
                         </div>
                         <div class="hidden-xs col-md-12">
                             <div onclick="activateTabs(this.id)" id="toprim-tab-large" class="col-md-1 selection-tab active">
@@ -102,7 +103,7 @@
                             <div onclick="activateTabs(this.id)" id="psu-tab-large" class="col-md-1 selection-tab">
                                 <span>Power Supply</span>
                             </div>
-                            <div style="margin-right:0;width:10%" onclick="activateTabs(this.id)" id="review-tab-large" class="col-md-1 selection-tab">
+                            <div style="margin-right:0;width:10%" onclick="activateTabs(this.id);reviewFill();" id="review-tab-large" class="col-md-1 selection-tab">
                                 <span>Review</span>
                             </div>
                         </div>
@@ -121,7 +122,7 @@
                                 </form>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="toprim-pb" class="col-12 toprim selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Piano Black" id="toprim-pb" class="col-12 toprim selection-list-option">
                                             <span>Piano Black</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -129,7 +130,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="toprim-mahog" class="col-12 toprim selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Mahogany" id="toprim-mahog" class="col-12 toprim selection-list-option">
                                             <span>Mahogany</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -137,7 +138,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="toprim-maple" class="col-12 toprim selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Maple" id="toprim-maple" class="col-12 toprim selection-list-option">
                                             <span>Maple</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -145,7 +146,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="toprim-rosewood-indian" class="col-12 toprim selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Indian Rosewood" id="toprim-rosewood-indian" class="col-12 toprim selection-list-option">
                                             <span>Indian Rosewood</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -153,7 +154,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="toprim-rosewood-santos" class="col-12 toprim selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Santos Rosewood" id="toprim-rosewood-santos" class="col-12 toprim selection-list-option">
                                             <span>Santos Rosewood</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -175,7 +176,7 @@
                                 </form>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="balltrack-pb" class="col-12 balltrack selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Piano Black" id="balltrack-pb" class="col-12 balltrack selection-list-option">
                                             <span>Piano Black</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -183,7 +184,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="balltrack-mahog" class="col-12 balltrack selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Mahogany" id="balltrack-mahog" class="col-12 balltrack selection-list-option">
                                             <span>Mahogany</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -191,7 +192,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="balltrack-maple" class="col-12 balltrack selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Maple" id="balltrack-maple" class="col-12 balltrack selection-list-option">
                                             <span>Maple</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -199,7 +200,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="balltrack-rosewood-indian" class="col-12 balltrack selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Indian Rosewood" id="balltrack-rosewood-indian" class="col-12 balltrack selection-list-option">
                                             <span>Indian Rosewood</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -207,7 +208,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="balltrack-rosewood-santos" class="col-12 balltrack selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Santos Rosewood" id="balltrack-rosewood-santos" class="col-12 balltrack selection-list-option">
                                             <span>Santos Rosewood</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -229,7 +230,7 @@
                                 </form>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="cone-pb" class="col-12 cone selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Piano Black" id="cone-pb" class="col-12 cone selection-list-option">
                                             <span>Piano Black</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -237,7 +238,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="cone-mahog" class="col-12 cone selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Mahogany" id="cone-mahog" class="col-12 cone selection-list-option">
                                             <span>Mahogany</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -245,7 +246,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="cone-maple" class="col-12 cone selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Maple" id="cone-maple" class="col-12 cone selection-list-option">
                                             <span>Maple</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -253,7 +254,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="cone-rosewood-indian" class="col-12 cone selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Indian Rosewood" id="cone-rosewood-indian" class="col-12 cone selection-list-option">
                                             <span>Indian Rosewood</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -261,7 +262,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="cone-rosewood-santos" class="col-12 cone selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Santos Rosewood" id="cone-rosewood-santos" class="col-12 cone selection-list-option">
                                             <span>Santos Rosewood</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -269,7 +270,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="cone-aurora" class="col-12 cone selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Aurora" id="cone-aurora" class="col-12 cone selection-list-option">
                                             <span>Aurora</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -291,7 +292,7 @@
                                 </form>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="outerbowl-blackbrown" style="background-color:#141111;" class="col-12 outerbowl selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Cammegh Black-Brown" id="outerbowl-blackbrown" style="background-color:#141111;" class="col-12 outerbowl selection-list-option">
                                             <span>Cammegh Black-Brown</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -299,7 +300,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="outerbowl-pb" style="background-color:black;" class="col-12 outerbowl selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Piano Black" id="outerbowl-pb" style="background-color:black;" class="col-12 outerbowl selection-list-option">
                                             <span>Piano Black</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -307,7 +308,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="outerbowl-cream" style="background-color:#fddfbe; color:black;" title="RAL140-4" class="col-12 outerbowl selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Cream" id="outerbowl-cream" style="background-color:#fddfbe; color:black;" title="RAL140-4" class="col-12 outerbowl selection-list-option">
                                             <span>Cream</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -331,7 +332,7 @@
                                 <div id="numberarc-pockets-37" class="numberarc-pockets arc-container active">
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-37-m1" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Roman Font, Primrose Numbers (M1)" id="numberarc-37-m1" class="col-12 numberarc selection-list-option">
                                                 <span>Standard Sequence, Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -339,7 +340,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-37-m3" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Geometric Font, White Numbers (M3)" id="numberarc-37-m3" class="col-12 numberarc selection-list-option">
                                                 <span>Standard Sequence, Geometric Font, White Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -347,7 +348,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-37-m8" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Myriad Pro Font, White Numbers (M8)" id="numberarc-37-m8" class="col-12 numberarc selection-list-option">
                                                 <span>Standard Sequence, Myriad Pro Font, White Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -355,7 +356,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-37-m23" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Smart Sans Font, Off-white Numbers (M23)" id="numberarc-37-m23" class="col-12 numberarc selection-list-option">
                                                 <span>Standard Sequence, Smart Sans Font, Off-White Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -365,7 +366,7 @@
                                 <div id="numberarc-pockets-38" class="numberarc-pockets arc-container">
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38a-m2" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Double Zero, American Standard (M2)" id="numberarc-38a-m2" class="col-12 numberarc selection-list-option">
                                                 <span>Standard American Sequence, Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -373,7 +374,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38e-m5" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Double Zero, European Standard (M5)" id="numberarc-38e-m5" class="col-12 numberarc selection-list-option">
                                                 <span>Standard European Sequence, Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -381,7 +382,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38b-m6" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Double Zero, European Variant 00-0 (M6)" id="numberarc-38b-m6" class="col-12 numberarc selection-list-option">
                                                 <span>European Variant (26 - 00 - 0 - 32), Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -389,7 +390,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container-full">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-38b-m7" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Double Zero, European Variant 0-00 (M7)" id="numberarc-38b-m7" class="col-12 numberarc selection-list-option">
                                                 <span>European Variant (26 - 0 - 00 - 32), Roman Font, Primrose Numbers</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -404,7 +405,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39ss-m15" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m15" class="col-12 numberarc selection-list-option">
                                                 <span>Las Vegas Sands</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -412,7 +413,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39ss-m16" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m16" class="col-12 numberarc selection-list-option">
                                                 <span>MGM New York NY</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -420,7 +421,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39ss-m21" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m21" class="col-12 numberarc selection-list-option">
                                                 <span>Excalibur Las Vegas</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -428,7 +429,7 @@
                                     </div>
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" id="numberarc-39sd-m29" class="col-12 numberarc selection-list-option">
+                                            <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39sd-m29" class="col-12 numberarc selection-list-option">
                                                 <span>Carnival Cruise Lines</span>
                                             </div>
                                             <div class="content-container-filler"></div>
@@ -445,14 +446,14 @@
                                 <form id="separator-style" action="POST">
                                     <span>Separator Style:</span>
                                     <div>
-                                        <input onclick="pocketsSelection()" id="separator-dr" type="radio" name="separator-style" value="dr" checked><span>Double Radius</span>
-                                        <input onclick="pocketsSelection()" id="separator-sc" type="radio" name="separator-style" value="sc"><span>Scalloped</span>
+                                        <input onclick="pocketsSelection()" id="separator-dr" type="radio" name="separator-style" data-value="Double Radius" value="dr" checked><span>Double Radius</span>
+                                        <input onclick="pocketsSelection()" id="separator-sc" type="radio" name="separator-style" data-value="Scalloped" value="sc"><span>Scalloped</span>
                                     </div>
                                 </form>
                                 <div class="content-container-filler"></div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="separator-polished-ali" class="col-12 separator selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Polished Aluminium" id="separator-polished-ali" class="col-12 separator selection-list-option">
                                             <span>Polished Aluminium</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -460,7 +461,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="separator-polished-brass" class="col-12 separator selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Polished Brass" id="separator-polished-brass" class="col-12 separator selection-list-option">
                                             <span>Polished Brass</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -468,7 +469,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="separator-anodised-clear" class="col-12 separator selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Clear Anodised" id="separator-anodised-clear" class="col-12 separator selection-list-option">
                                             <span>Clear Anodised Aluminium</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -476,7 +477,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="separator-anodised-gold" class="col-12 separator selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Gold Anodised" id="separator-anodised-gold" class="col-12 separator selection-list-option">
                                             <span>Gold Anodised Aluminium</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -492,15 +493,15 @@
                                 <form id="turret-type" action="POST">
                                     <span>Turret Type:</span>
                                     <div>
-                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-type" value="standard" checked><span>Standard</span>
-                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-type" value="french"><span>French</span>
-                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-type" value="continental"><span>Continental</span>
+                                        <input onclick="turretSelection(this.name,this.value)" data type="radio" name="turret-type" value="standard" checked><span>Standard</span>
+                                        <input onclick="turretSelection(this.name,this.value)" data type="radio" name="turret-type" value="french"><span>French</span>
+                                        <input onclick="turretSelection(this.name,this.value)" data type="radio" name="turret-type" value="continental"><span>Continental</span>
                                     </div>
                                 </form>
                                 <div class="content-container-filler"></div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="turret-plated-nickel" class="col-12 standard french turret selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Nickel Plated" id="turret-plated-nickel" class="col-12 standard french turret selection-list-option">
                                             <span>Nickel Plated</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -508,7 +509,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="turret-plated-gold" class="col-12 standard french turret selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Gold Plated" id="turret-plated-gold" class="col-12 standard french turret selection-list-option">
                                             <span>Gold Plated</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -516,7 +517,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="turret-anodised-clear" class="col-12 standard french turret selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Clear Anodised" id="turret-anodised-clear" class="col-12 standard french turret selection-list-option">
                                             <span>Clear Anodised</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -524,7 +525,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="turret-anodised-gold" class="col-12 standard french turret selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Gold Anodised" id="turret-anodised-gold" class="col-12 standard french turret selection-list-option">
                                             <span>Gold Anodised</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -532,7 +533,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container arc-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="turret-continental" class="col-12 continental turret selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Polished Stainless Steel" id="turret-continental" class="col-12 continental turret selection-list-option">
                                             <span>Polished Stainless Steel</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -556,7 +557,7 @@
                                 </form>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="ballstops-polished" class="col-12 ballstops selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Polished Stainless Steel" id="ballstops-polished" class="col-12 ballstops selection-list-option">
                                             <span>Polished Stainless Steel</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -564,7 +565,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="ballstops-plated-gold" class="col-12 ballstops selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Gold Plated" id="ballstops-plated-gold" class="col-12 ballstops selection-list-option">
                                             <span>Gold Plated</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -572,7 +573,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="ballstops-matt" class="col-12 ballstops selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Matt Stainless" id="ballstops-matt" class="col-12 ballstops selection-list-option">
                                             <span>Matt Stainless Steel</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -580,7 +581,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="ballstops-matt-gold" class="col-12 ballstops selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Matt Gold" id="ballstops-matt-gold" class="col-12 ballstops selection-list-option">
                                             <span>Matt Gold Plated</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -594,7 +595,7 @@
                                 <div class="content-container-filler"></div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="psu-aus" class="col-12 psu selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Austrlian (IEC Type I)" id="psu-aus" class="col-12 psu selection-list-option">
                                             <span>Australian</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -602,7 +603,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="psu-eu" class="col-12 psu selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="European (IEC Type E)" id="psu-eu" class="col-12 psu selection-list-option">
                                             <span>European</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -610,7 +611,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="psu-swiss" class="col-12 psu selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="Swiss (IEC Type J)" id="psu-swiss" class="col-12 psu selection-list-option">
                                             <span>Swiss</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -618,7 +619,7 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="psu-uk" class="col-12 psu selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="UK (IEC Type G)" id="psu-uk" class="col-12 psu selection-list-option">
                                             <span>United Kingdom</span>
                                         </div>
                                         <div class="content-container-filler"></div>
@@ -626,32 +627,30 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" id="psu-us" class="col-12 psu selection-list-option">
+                                        <div onclick="activateSelections(this.id)" data-id="USA (IEC Type B)" id="psu-us" class="col-12 psu selection-list-option">
                                             <span>USA</span>
                                         </div>
                                         <div class="content-container-filler"></div>
                                     </div>
                                 </div>
                             </div>
-                            <div onclick="activateTabs(this.id)" id="review-tab-small" class="col-12 hidden-md selection-tab">
+                            <div onclick="activateTabs(this.id);reviewFill();" id="review-tab-small" class="col-12 hidden-md selection-tab">
                                 <span>Review</span>
                             </div>
                             <div id="review-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div class="col-12 selection-list-total">
-                                            <p>Your selections:</p>
-                                            <p>Top Rim: <span class="toprim-selection">somebody</span></p>
-                                            <p>Balltrack: <span class="balltrack-selection">once</span></p>
-                                            <p>Cone: <span class="cone-selection">told</span></p>
-                                            <p>Outer Bowl: <span class="outerbowl-selection">me</span></p>
-                                            <p>Number Arcs: <span class="numberarc-selection">the</span></p>
-                                            <p>Separator: <span class="separator-selection">world</span></p>
-                                            <p>Turret: <span class="turret-selection">was</span></p>
-                                            <p>Ball Stops: <span class="ballstops-selection">gonna</span></p>
-                                            <p>Power Supply: <span class="psu-selection">roll me</span></p>
-                                        </div>
+                                <div class="col-12 selection-list-option-container">
+                                    <div class="col-12 selection-list-total">
+                                        <p>Your selections:</p>
+                                        <p>Top Rim: </p><p><span data-id="toprim"></span></p><br>
+                                        <p>Balltrack: </p><p><span data-id="balltrack"></span></p><br>
+                                        <p>Cone: </p><p><span data-id="cone"></span></p><br>
+                                        <p>Outer Bowl: </p><p><span data-id="outerbowl"></span></p><br>
+                                        <p>Number Arcs: </p><p><span data-id="numberarc"></span></p><br>
+                                        <p>Separator: </p><p><span data-id="separator"></span></p><br>
+                                        <p>Turret: </p><p><span data-id="turret"></span></p><br>
+                                        <p>Ball Stops: </p><p><span data-id="ballstops"></span></p><br>
+                                        <p>Power Supply: </p><p><span data-id="psu"></span></p><hr>
                                     </div>
                                     <div class="content-container-filler"></div>
                                 </div>
