@@ -671,6 +671,7 @@ hr {
 }
 
 .selection-list-container,
+.review-list-container,
 .selection-list-container-full {
     width: 100%;
     transition: width ease-in-out 0.3s;
@@ -749,4 +750,17 @@ hr {
     .hidden-md {
         display: none;
     }
+}
+
+form p {
+    margin-top: 10px;
+}
+
+.checkbox {
+    margin: 10px 0;
+}
+
+.submit {
+    padding: 3px 10px;
+    margin-bottom: 14px;
 }
