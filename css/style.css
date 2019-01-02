@@ -752,7 +752,15 @@ hr {
     }
 }
 
-form p {
+#enquiry-form {
+    border: solid 1px rgba(255,255,255,0.25);
+    margin: 10px 0 5px;
+    padding: 10px;
+    padding-top: 0;
+    background: rgba(0,0,0,0.3);
+}
+
+#enquiry-form p {
     margin-top: 10px;
 }
 
@@ -762,5 +770,4 @@ form p {
 
 .submit {
     padding: 3px 10px;
-    margin-bottom: 14px;
 }
