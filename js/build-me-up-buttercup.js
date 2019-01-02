@@ -50,12 +50,7 @@ function activateSelections(id) {
                 picFinish = picFinishArr[i].value;
             }
         }
-        if (picFinish === undefined) {
-            pic.src = "../images/wheel-builder/blank-background.png";
-        }
-        else {
-            pic.src = `../images/wheel-builder/${id}-${picFinish}.png`;
-        }
+        picFinish === undefined ? pic.src = "../images/wheel-builder/blank-background.png" : pic.src = `../images/wheel-builder/${id}-${picFinish}.png`;
     }
     // Ball stop selection
     else if (document.getElementById(`${base}-qty`) !== null) {
@@ -66,12 +61,7 @@ function activateSelections(id) {
                 ballstopQty = ballstopQtyArr[i].value;
             }
         }
-        if (ballstopQty === undefined) {
-            pic.src = "../images/wheel-builder/blank-background.png";
-        }
-        else {
-            pic.src = `../images/wheel-builder/${id}-${ballstopQty}.png`;
-        }
+        ballstopQty === undefined ? pic.src = "../images/wheel-builder/blank-background.png" : pic.src = `../images/wheel-builder/${id}-${ballstopQty}.png`;
     }
     // Turret selection
     else if (document.getElementById(`${base}-type`) !== null) {
@@ -82,12 +72,7 @@ function activateSelections(id) {
                 turretType = turretTypesArr[i].value;
             }
         }
-        if (turretType === undefined) {
-            pic.src = "../images/wheel-builder/blank-background.png";
-        }
-        else {
-            pic.src = `../images/wheel-builder/${id}-${turretType}.png`;
-        }
+        turretType === undefined ? pic.src = "../images/wheel-builder/blank-background.png" : pic.src = `../images/wheel-builder/${id}-${turretType}.png`;
     }
     // Power supply selection
     else if (possSelections[0] && possSelections[0].classList.contains((`psu`))) {
