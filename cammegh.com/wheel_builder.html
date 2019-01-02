@@ -11,6 +11,12 @@
     <link rel="stylesheet" href="../css/bootstrap-parts.css" type="text/css" />
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <link rel="shortcut icon" href="../images/favicon.jpg" />
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_VdyMfCjVAi2BZ064GZ34C");
+        })();
+    </script>
 </head>
 
 <body>
@@ -589,7 +595,7 @@
                                 </div>
                             </div>
                             <div onclick="activateTabs(this.id)" id="psu-tab-small" class="col-12 hidden-md selection-tab">
-                                <span>Power Supply</span>
+                                <span>Power Cord</span>
                             </div>
                             <div id="psu-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
@@ -639,27 +645,55 @@
                             </div>
                             <div id="review-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
-                                <div class="col-12 selection-list-option-container">
-                                    <div class="col-12 selection-list-total">
-                                        <p>Your selections:</p>
-                                        <p>Top Rim: </p><p><span data-id="toprim"></span></p><br>
-                                        <p>Balltrack: </p><p><span data-id="balltrack"></span></p><br>
-                                        <p>Cone: </p><p><span data-id="cone"></span></p><br>
-                                        <p>Outer Bowl: </p><p><span data-id="outerbowl"></span></p><br>
-                                        <p>Number Arcs: </p><p><span data-id="numberarc"></span></p><br>
-                                        <p>Separator: </p><p><span data-id="separator"></span></p><br>
-                                        <p>Turret: </p><p><span data-id="turret"></span></p><br>
-                                        <p>Ball Stops: </p><p><span data-id="ballstops"></span></p><br>
-                                        <p>Power Supply: </p><p><span data-id="psu"></span></p><hr>
+                                <div class="col-12 review-list-container">
+                                    <div class="selection-list-option-container">
+                                        <div class="col-12 selection-list-total">
+                                            <p>Top Rim:</p>
+                                            <p><span data-value="toprim_selection" data-id="toprim"></span></p><br>
+                                            <p>Balltrack:</p>
+                                            <p><span data-value="" data-id="balltrack"></span></p><br>
+                                            <p>Cone:</p>
+                                            <p><span data-value="" data-id="cone"></span></p><br>
+                                            <p>Outer Bowl:</p>
+                                            <p><span data-value="" data-id="outerbowl"></span></p><br>
+                                            <p>Number Arcs:</p>
+                                            <p><span data-value="" data-id="numberarc"></span></p><br>
+                                            <p>Separator:</p>
+                                            <p><span data-value="" data-id="separator"></span></p><br>
+                                            <p>Turret:</p>
+                                            <p><span data-value="" data-id="turret"></span></p><br>
+                                            <p>Ball Stops:</p>
+                                            <p><span data-value="" data-id="ballstops"></span></p><br>
+                                            <p>Power Cord:</p>
+                                            <p><span data-value="" data-id="psu"></span></p>
+                                            <hr>
+                                        </div>
                                     </div>
                                     <div class="content-container-filler"></div>
                                 </div>
-                                <div class="col-12 selection-list-container">
+                                <div class="col-12 review-list-container">
                                     <div class="selection-list-option-container">
                                         <div class="col-12 submission-form">
-                                            <p>Help me...</p>
+                                            <p class="fine-print">Please fill out the form below to receive an email with a render of your selections. There is a checkbox at the bottom of the form which gives you the option to send a copy of the email to our Sales department
+                                                in order to give you a formal quote.</p>
+                                            <form method="post" name="enquiry-form" id="enquiry-form">
+                                                <p>Name:</p>
+                                                <input required validate type="text">
+                                                <p>Email:</p>
+                                                <input required validate type="text">
+                                                <p>Special Sequence: <span class="fine-print">(if applicable)</span></p>
+                                                <input type="text">
+                                                <div class="content-container-filler"></div>
+                                                <div class="checkbox">
+                                                    <input class="fine-print" type="checkbox" name="sales-email-check" id="sales-email-check">
+                                                    <label for="sales-email-check" class="fine-print">I would like Cammegh to send me a quote based on the specifications I have made.</label>
+                                                </div>
+                                                <div class="content-container-filler"></div>
+                                                <input type="submit" class="submit" value="Submit">
+                                            </form>
                                         </div>
                                     </div>
+                                    <div class="content-container-filler"></div>
                                 </div>
                             </div>
                         </div>
@@ -668,6 +702,17 @@
                 </section>
             </div>
         </div>
+        <div class="modal fade" id="enquiry-submission" tabindex="-1" role="dialog" aria-labelledby="enquiry-modal">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="enquiry-modal">Email sent.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="footer-spacer">
             <!-- Spacer for the footer -->
         </div>
@@ -683,8 +728,13 @@
             </div>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="../js/smart-hover.js"></script>
     <script src="../js/build-me-up-buttercup.js"></script>
+    <script src="../js/bootstrap-modal.js"></script>
+    <script src="../js/send-enquiry.js"></script>
+    <!--emailjs.send("gmail", "cammegh_wheel_builder", { name: "Seb", notes: "stuff and things" });-->
 </body>
 
 </html>
