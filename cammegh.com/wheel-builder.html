@@ -32,7 +32,7 @@
                 <div class="hidden-xs col-md-9 navbar-items">
                     <a href="index.html" class="navbar-button col-fifth">Home</a>
                     <a href="products.html" class="navbar-button col-fifth">Products</a>
-                    <a href="wheel_builder.html" class="navbar-button col-fifth">Wheel Builder</a>
+                    <a href="wheel-builder.html" class="navbar-button col-fifth">Wheel Builder</a>
                     <a href="clients.html" class="navbar-button col-fifth">Clients</a>
                     <a href="contact.html" class="navbar-button col-fifth">Contact Info</a>
                 </div>
@@ -41,7 +41,7 @@
                     <div class="dropdown-menu">
                         <a href="index.html">Home</a>
                         <a href="products.html">Products</a>
-                        <a href="wheel_builder.html">Wheel Builder <i class="fa fa-angle-left"></i></a>
+                        <a href="wheel-builder.html">Wheel Builder <i class="fa fa-angle-left"></i></a>
                         <a href="clients.html">Clients</a>
                         <a href="contact.html">Contact Info</a>
                     </div>
@@ -61,7 +61,7 @@
                         <div class="col-12">
                             <p>Welcome to the Wheel Builder. Cammegh prides itself on the level of customisability available to its clients, and with a wealth of options, this tool will allow you to create your very own Cammegh Roulette Wheel.</p>
                             <hr>
-                            <p>Once you have a design you are happy with, please complete the form below and a full HD render of your wheel along with a list of your selected options will be sent to you via email. A copy of this will also be sent to our
+                            <p>Once you have a design you are happy with, please complete the form below and a <span style="display: none">full HD render of your wheel along with a</span> list of your selected options will be sent to you via email. A copy of this will also be sent to our
                                 Sales team for a formal quote by default unless specified in the tickbox in the form.</p>
                         </div>
                         <div class="content-container-filler"></div>
@@ -649,23 +649,23 @@
                                     <div class="selection-list-option-container">
                                         <div class="col-12 selection-list-total">
                                             <p>Top Rim:</p>
-                                            <p><span data-value="toprim_selection" data-id="toprim"></span></p><br>
+                                            <p><span id="toprim_selection" data-id="toprim"></span></p><br>
                                             <p>Balltrack:</p>
-                                            <p><span data-value="" data-id="balltrack"></span></p><br>
+                                            <p><span id="balltrack_selection" data-id="balltrack"></span></p><br>
                                             <p>Cone:</p>
-                                            <p><span data-value="" data-id="cone"></span></p><br>
+                                            <p><span id="cone_selection" data-id="cone"></span></p><br>
                                             <p>Outer Bowl:</p>
-                                            <p><span data-value="" data-id="outerbowl"></span></p><br>
+                                            <p><span id="outerbowl_selection" data-id="outerbowl"></span></p><br>
                                             <p>Number Arcs:</p>
-                                            <p><span data-value="" data-id="numberarc"></span></p><br>
+                                            <p><span id="numberarc_selection" data-id="numberarc"></span></p><br>
                                             <p>Separator:</p>
-                                            <p><span data-value="" data-id="separator"></span></p><br>
+                                            <p><span id="separator_selection" data-id="separator"></span></p><br>
                                             <p>Turret:</p>
-                                            <p><span data-value="" data-id="turret"></span></p><br>
+                                            <p><span id="turret_selection" data-id="turret"></span></p><br>
                                             <p>Ball Stops:</p>
-                                            <p><span data-value="" data-id="ballstops"></span></p><br>
+                                            <p><span id="ballstops_selection" data-id="ballstops"></span></p><br>
                                             <p>Power Cord:</p>
-                                            <p><span data-value="" data-id="psu"></span></p>
+                                            <p><span id="psu_selection" data-id="psu"></span></p>
                                             <hr>
                                         </div>
                                     </div>
@@ -678,14 +678,14 @@
                                                 in order to give you a formal quote.</p>
                                             <form method="post" name="enquiry-form" id="enquiry-form">
                                                 <p>Name:</p>
-                                                <input required validate type="text">
+                                                <input required validate id="from_name" type="text">
                                                 <p>Email:</p>
-                                                <input required validate type="text">
-                                                <p>Special Sequence: <span class="fine-print">(if applicable)</span></p>
-                                                <input type="text">
+                                                <input required validate id="from_email" type="text">
+                                                <p>Special Number Arc Sequence: <span class="fine-print">(if applicable)</span></p>
+                                                <input id="special_arc_seq" type="text">
                                                 <div class="content-container-filler"></div>
                                                 <div class="checkbox">
-                                                    <input class="fine-print" type="checkbox" name="sales-email-check" id="sales-email-check">
+                                                    <input class="fine-print" type="checkbox" name="sales-email-check" id="sales-email-check" checked>
                                                     <label for="sales-email-check" class="fine-print">I would like Cammegh to send me a quote based on the specifications I have made.</label>
                                                 </div>
                                                 <div class="content-container-filler"></div>
@@ -734,7 +734,6 @@
     <script src="../js/build-me-up-buttercup.js"></script>
     <script src="../js/bootstrap-modal.js"></script>
     <script src="../js/send-enquiry.js"></script>
-    <!--emailjs.send("gmail", "cammegh_wheel_builder", { name: "Seb", notes: "stuff and things" });-->
 </body>
 
 </html>
