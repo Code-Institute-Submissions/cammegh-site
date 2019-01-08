@@ -169,7 +169,6 @@
 
 .hidden-xs {
   display: none;
-  transition: display ease-in-out 0.2s;
 }
 
 @media (min-width: 768px) {
@@ -190,7 +189,6 @@
   .col-sm-12 {
     float: left;
     display: block;
-    transition: display ease-in-out 0.2s;
   }
   .col-sm-12 {
     width: 100%;
@@ -308,7 +306,6 @@
   }
   .hidden-sm {
     display: none;
-    transition: display ease-in-out 0.2s;
   }
 }
 
@@ -330,7 +327,6 @@
   .col-md-12 {
     float: left;
     display: block;
-    transition: display ease-in-out 0.2s;
   }
   .col-md-12 {
     width: 100%;
@@ -448,7 +444,6 @@
   }
   .hidden-md {
     display: none;
-    transition: display ease-in-out 0.2s;
   }
 }
 
@@ -470,7 +465,6 @@
   .col-lg-12 {
     float: left;
     display: block;
-    transition: display ease-in-out 0.2s;
   }
   .col-lg-12 {
     width: 100%;
@@ -588,7 +582,6 @@
   }
   .hidden-lg {
     display: none;
-    transition: display ease-in-out 0.2s;
   }
 }
 

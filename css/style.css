@@ -417,60 +417,55 @@ hr {
 }
 
 .product-button {
-    min-height: 250px;
-}
-
-@media(min-width:320px) {
-    .product-button {
-        min-height: 255px;
-    }
+    min-height: 270px;
+    cursor: pointer;
 }
 
 @media(min-width:350px) {
     .product-button {
-        min-height: 215px;
+        min-height: 230px;
     }
 }
 
 @media(min-width:400px) {
     .product-button {
-        min-height: 190px;
+        min-height: 205px;
     }
 }
 
 @media(min-width:450px) {
     .product-button {
-        min-height: 170px;
+        min-height: 185px;
     }
 }
 
 @media(min-width:500px) {
     .product-button {
-        min-height: 150px;
+        min-height: 165px;
     }
 }
 
 @media(min-width:600px) {
     .product-button {
-        min-height: 125px;
+        min-height: 140px;
     }
 }
 
 @media(min-width:768px) {
     .product-button {
-        min-height: 145px;
+        min-height: 165px;
     }
 }
 
 @media(min-width:900px) {
     .product-button {
-        min-height: 130px;
+        min-height: 145px;
     }
 }
 
-@media(min-width:1200px) {
+@media(min-width:992px) {
     .product-button {
-        min-height: 145px;
+        min-height: 165px;
     }
 }
 
@@ -567,6 +562,35 @@ hr {
     }
 }
 
+.product-button-container {
+    transition: width 0.5s ease-in-out 0.5s;
+}
+
+.active-product-image {
+    height: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.active-product,
+.active-product-header {
+    width: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+.active-product-content {
+    display: none;
+    padding: 5px;
+}
+
+.descriptor {
+    display: none;
+}
+
+.active-product-content>p {
+    margin-bottom: 5px;
+}
 
 /*----------------------- Contact page */
 
@@ -753,11 +777,11 @@ hr {
 }
 
 #enquiry-form {
-    border: solid 1px rgba(255,255,255,0.25);
+    border: solid 1px rgba(255, 255, 255, 0.25);
     margin: 10px 0 5px;
     padding: 10px;
     padding-top: 0;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
 }
 
 #enquiry-form p {
