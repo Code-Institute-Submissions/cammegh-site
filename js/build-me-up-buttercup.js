@@ -5,26 +5,26 @@ function activateTabs(id) {
     var shortID = base.concat("tab-small");
     var selectionID = base.concat("selection");
     //Get elements
-    var shorttab = document.getElementById(shortID);
-    var longtab = document.getElementById(longID);
-    var selectionPanel = document.getElementById(selectionID);
-    var tabs = document.getElementsByClassName("selection-tab active");
-    var selections = document.getElementsByClassName("selection-list active");
+    var shorttab = $('#' + shortID);
+    var longtab = $('#' + longID);
+    var selectionPanel = $('#' + selectionID);
+    var tabs = $(".selection-tab.active");
+    var selections = $(".selection-list.active");
     //Remove "active" class from all elements
-    while (tabs[0]) {
-        tabs[0].classList.remove("active");
-    }
-    while (selections[0]) {
-        selections[0].classList.remove("active");
-    }
+    tabs.each(function() {
+        $(this).removeClass("active");
+    });
+    selections.each(function() {
+        $(this).removeClass("active");
+    });
     //Add "acttive" class to appropriate elements
-    shorttab.classList.add("active");
-    longtab.classList.add("active");
-    selectionPanel.classList.add("active");
+    shorttab.addClass("active");
+    longtab.addClass("active");
+    selectionPanel.addClass("active");
 }
 
 function activateSelections(id) {
-    //Declare variables
+    // //Declare variables
     var arr = id.split("-");
     var base = arr[0];
     //Get elements
@@ -135,32 +135,32 @@ function pocketsSelection() {
 
 function turretSelection(name, value) {
     var base = name.split("-")[0];
-    var selection = document.getElementsByClassName(`${base} selection-list-option active`)[0];
-    if (selection && selection.classList.contains(value)) {
+    var selection = $('.' + base + '.selection-list-option.active').first();
+    if (selection && selection.hasClass(value)) {
         finishSelection(name, value);
     }
     var checkedVal = value;
-    var allTurrets = document.getElementsByClassName(base);
-    var possTurrets = [];
-    var pic = document.getElementById(base);
-    for (i = 0; i < allTurrets.length; i++) {
-        if (allTurrets[i].classList.contains(checkedVal)) {
-            possTurrets.push(allTurrets[i]);
+    var allTurrets = $('.' + base);
+    var possTurrets = $([]);
+    var pic = $('#' + base);
+    allTurrets.each(function() {
+        if ($(this).hasClass(checkedVal)) {
+            possTurrets.push($(this));
         }
-        allTurrets[i].parentNode.parentNode.classList.add("arc-container");
-    }
-    for (i = 0; i < possTurrets.length; i++) {
-        possTurrets[i].parentNode.parentNode.classList.remove("arc-container");
-    }
+        $(this).parent().parent().addClass("arc-container");
+    });
+    possTurrets.each(function() {
+        $(this).parent().parent().removeClass("arc-container");
+    });
 }
 
 function finishSelection(name, value) {
     var base = name.split("-")[0];
-    var selection = document.getElementsByClassName(`${base} selection-list-option active`)[0];
-    var pic = document.getElementById(base);
-    if (selection) {
-        var selectionId = selection.id;
-        pic.src = `../images/wheel-builder/${selectionId}-${value}.png`;
+    var selection = $('.' + base + '.selection-list-option.active').first();
+    var pic = $('#' + base);
+    if (selection[0]) {
+        var selectionId = selection[0].id;
+        pic.attr('src', `../images/wheel-builder/${selectionId}-${value}.png`);
     }
 }
 
