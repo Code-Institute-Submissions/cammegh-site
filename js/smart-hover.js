@@ -23,3 +23,23 @@
 	document.addEventListener('touchstart', addtouchclass, false); //this event only gets called when input type is touch
 	document.addEventListener('mouseover', removetouchclass, false); //this event gets called when input type is everything from touch to mouse/ trackpad
 })();
+
+$(function() {
+    $('.fa-bars').on('click', function() {
+        $(this).toggle();
+        $('.fa-times').toggle();
+        $('.dropdown-menu').fadeIn(250);
+    });
+    $('.fa-times').on('click', function() {
+        $(this).toggle();
+        $('.fa-bars').toggle();
+        $('.dropdown-menu').fadeOut(250);
+    });
+    $('.dropdown-menu-link').on('click', function() {
+        if ($('.fa-times').css('display') === 'block') {
+            $('.fa-times').toggle();
+            $('.fa-bars').toggle();
+            $('.dropdown-menu').fadeOut(250);
+        }
+    });
+});

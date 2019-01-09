@@ -325,11 +325,6 @@ h3 {
     text-align: left;
 }
 
-.dropdown-menu:hover,
-.navbar-dropdown-icon:hover+.dropdown-menu {
-    display: block;
-}
-
 .dropdown-menu a {
     display: block;
     text-decoration: none;
