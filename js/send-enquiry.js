@@ -7,6 +7,7 @@ $(function() {
             "from_email": $('#from_email').val(),
             "cc_email": ccEmail,
             "toprim": $('#toprim_selection').html(),
+            "halo": $('#halo_selection').html(),
             "balltrack": $('#balltrack_selection').html(),
             "cone": $('#cone_selection').html(),
             "outerbowl": $('#outerbowl_selection').html(),

@@ -608,6 +608,10 @@ hr {
     display: block;
 }
 
+#balltrack {
+    z-index: 1;
+}
+
 #cone {
     z-index: 2;
 }
@@ -618,10 +622,6 @@ hr {
 
 #separator {
     z-index: 4;
-}
-
-#balltrack {
-    z-index: 1;
 }
 
 #ballstops {
@@ -636,8 +636,12 @@ hr {
     z-index: 7;
 }
 
-#turret {
+#halo {
     z-index: 8;
+}
+
+#turret {
+    z-index: 9;
 }
 
 .selection-tab {

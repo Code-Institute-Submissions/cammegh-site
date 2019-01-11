@@ -1,3 +1,11 @@
+const imageBase = '../images/wheel-builder/';
+const imageBlank = `${imageBase}blank-background.png`;
+
+function picFade(picture,link){
+    $(picture).fadeOut(300).delay(100).fadeIn(300);
+    setTimeout(function() {picture.src = link;}, 300);
+}
+
 function activateTabs(id) {
     //Declare variables
     var base = id.slice(0, id.length - 9);
@@ -28,10 +36,22 @@ function activateSelections(id) {
     var arr = id.split("-");
     var base = arr[0];
     //Get elements
-    var selection = document.getElementById(id);
+    var selection = $('#' + id)[0];
     var possSelections = document.getElementsByClassName(`${base} selection-list-option active`);
+    var pic = $('#' + base)[0];
     //Do something with the elements
-    if (selection.classList.contains("active")) {
+    if (id === "halo-check") {
+        var checked = $('#' + id)[0].checked;
+        if (checked) {
+            picFade(pic,`${imageBase}halo.png`);
+            $('#' + id)[0].labels[0].innerHTML = "Halo on";
+        }
+        else {
+            picFade(pic,imageBlank);
+            $('#' + id)[0].labels[0].innerHTML = "Halo off";
+        }
+    }
+    else if (selection.classList.contains("active")) {
         selection.classList.remove("active");
     }
     else {
@@ -40,7 +60,6 @@ function activateSelections(id) {
         }
         selection.classList.add("active");
     }
-    var pic = document.getElementById(base);
     // Veneer finish selection
     if (document.getElementById(`${base}-finish`) !== null) {
         var picFinishArr = document.getElementsByName(`${base}-finish`);
@@ -50,7 +69,7 @@ function activateSelections(id) {
                 picFinish = picFinishArr[i].value;
             }
         }
-        picFinish === undefined ? pic.src = "../images/wheel-builder/blank-background.png" : pic.src = `../images/wheel-builder/${id}-${picFinish}.png`;
+        picFinish === undefined ? picFade(pic,imageBlank) : picFade(pic,`${imageBase}${id}-${picFinish}.png`);
     }
     // Ball stop selection
     else if (document.getElementById(`${base}-qty`) !== null) {
@@ -61,7 +80,7 @@ function activateSelections(id) {
                 ballstopQty = ballstopQtyArr[i].value;
             }
         }
-        ballstopQty === undefined ? pic.src = "../images/wheel-builder/blank-background.png" : pic.src = `../images/wheel-builder/${id}-${ballstopQty}.png`;
+        ballstopQty === undefined ? picFade(pic,imageBlank) : picFade(pic,`${imageBase}${id}-${ballstopQty}.png`);
     }
     // Turret selection
     else if (document.getElementById(`${base}-type`) !== null) {
@@ -72,11 +91,11 @@ function activateSelections(id) {
                 turretType = turretTypesArr[i].value;
             }
         }
-        turretType === undefined ? pic.src = "../images/wheel-builder/blank-background.png" : pic.src = `../images/wheel-builder/${id}-${turretType}.png`;
+        turretType === undefined ? picFade(pic,imageBlank) : picFade(pic,`${imageBase}${id}-${turretType}.png`);
     }
     // Power supply selection
     else if (possSelections[0] && possSelections[0].classList.contains((`psu`))) {
-        pic.src = `../images/wheel-builder/${possSelections[0].id}.png`;
+        picFade(pic,`${imageBase}${possSelections[0].id}.png`);
     }
     // Separator & number arc selection
     else {
@@ -116,20 +135,20 @@ function pocketsSelection() {
         }
     }
     if (arcSelection && sepSelection) {
-        arcPic.src = `../images/wheel-builder/${arcId}.png`;
-        sepPic.src = `../images/wheel-builder/${sepId}-${arcPockets}-${sepStyle}.png`;
+        picFade(arcPic,`${imageBase}${arcId}.png`);
+        picFade(sepPic,`${imageBase}${sepId}-${pocketsVal}-${sepStyle}.png`);
     }
     else if (arcSelection && !sepSelection) {
-        arcPic.src = `../images/wheel-builder/${arcId}.png`;
-        sepPic.src = `../images/wheel-builder/blank-background.png`;
+        picFade(arcPic,`${imageBase}${arcId}.png`);
+        picFade(sepPic,imageBlank);
     }
     else if (sepSelection && !arcSelection) {
-        arcPic.src = `../images/wheel-builder/blank-background.png`;
-        sepPic.src = `../images/wheel-builder/${sepId}-${pocketsVal}-${sepStyle}.png`;
+        picFade(arcPic,imageBlank);
+        picFade(sepPic,`${imageBase}${sepId}-${pocketsVal}-${sepStyle}.png`);
     }
     else {
-        arcPic.src = `../images/wheel-builder/blank-background.png`;
-        sepPic.src = `../images/wheel-builder/blank-background.png`;
+        picFade(arcPic,imageBlank);
+        picFade(sepPic,imageBlank);
     }
 }
 
@@ -157,10 +176,10 @@ function turretSelection(name, value) {
 function finishSelection(name, value) {
     var base = name.split("-")[0];
     var selection = $('.' + base + '.selection-list-option.active').first();
-    var pic = $('#' + base);
+    var pic = $('#' + base)[0];
     if (selection[0]) {
         var selectionId = selection[0].id;
-        pic.attr('src', `../images/wheel-builder/${selectionId}-${value}.png`);
+        picFade(pic,`${imageBase}${selectionId}-${value}.png`);
     }
 }
 
@@ -237,6 +256,16 @@ function reviewFill() {
             // Deals with everything else
             else {
                 dataIds.push(selection.dataset.id);
+            }
+        }
+        // Deals with halo checkbox
+        else if (spanIds[i] === 'halo') {
+            var checked = $('#halo-check')[0].checked;
+            if (checked) {
+                dataIds.push("Yes");
+            }
+            else {
+                dataIds.push("No");
             }
         }
         // If a section does not have a selection

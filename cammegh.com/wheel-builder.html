@@ -79,6 +79,7 @@
                             <img src="../images/wheel-builder/blank-background.png" id="ballstops" alt="Ball Stops Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="outerbowl" alt="Outer Bowl Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="toprim" alt="Top Rim Layer" class="wheel-builder-preview">
+                            <img src="../images/wheel-builder/blank-background.png" id="halo" alt="Halo Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="turret" alt="Turret Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="psu" alt="Power Supply Layer" class="wheel-builder-preview">
                         </div>
@@ -125,6 +126,8 @@
                                     <div>
                                         <input onclick="finishSelection(this.name,this.value)" id="toprim-gloss" type="radio" name="toprim-finish" value="gloss" checked><span>Gloss</span>
                                         <input onclick="finishSelection(this.name,this.value)" id="toprim-matt" type="radio" name="toprim-finish" value="matt"><span>Matt</span>
+                                        <input onclick="activateSelections(this.id)" id="halo-check" type="checkbox" name="halo-check" value="halo" hidden>
+                                        <label for="halo-check" style="cursor: pointer;">Halo off</label>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -651,6 +654,8 @@
                                         <div class="col-12 selection-list-total">
                                             <p>Top Rim:</p>
                                             <p><span id="toprim_selection" data-id="toprim"></span></p><br>
+                                            <p>Halo Band:</p>
+                                            <p><span id="halo_selection" data-id="halo"></span></p><br>
                                             <p>Balltrack:</p>
                                             <p><span id="balltrack_selection" data-id="balltrack"></span></p><br>
                                             <p>Cone:</p>
