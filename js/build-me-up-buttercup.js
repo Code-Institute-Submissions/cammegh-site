@@ -136,7 +136,7 @@ function pocketsSelection() {
     }
     if (arcSelection && sepSelection) {
         picFade(arcPic,`${imageBase}${arcId}.png`);
-        picFade(sepPic,`${imageBase}${sepId}-${pocketsVal}-${sepStyle}.png`);
+        picFade(sepPic,`${imageBase}${sepId}-${arcPockets}-${sepStyle}.png`);
     }
     else if (arcSelection && !sepSelection) {
         picFade(arcPic,`${imageBase}${arcId}.png`);
