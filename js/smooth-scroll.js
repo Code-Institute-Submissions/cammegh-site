@@ -3,8 +3,8 @@
 $(document).ready(function() {
     // Add smooth scrolling to all links
     $("a").on('click', function(event) {
-        // Make sure this.hash wants to return to the top of the page before overriding default behavior
-        if (this.hash === "#top") {
+        // Make sure this.hash wants to move somewhere in the same page before overriding default behavior
+        if (this.hash !== "" && $(this).attr('href').slice(0,1) === '#') {
             // Prevent default anchor click behavior
             event.preventDefault();
             // Store hash
