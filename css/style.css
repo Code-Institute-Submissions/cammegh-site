@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:100,200,300,400,500,600,700|Open+Sans:100,200,300,400,500,600,700');
-
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif+KR:400|Roboto:700|Montserrat:500');
 /*---------------------------------------- General Containers */
 
 * {
@@ -11,7 +10,9 @@ body {
     margin: 0;
     padding: 0;
     min-width: 300px;
-    font-family: "Open Sans", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    background-color: #000c10;
 }
 
 h1,
@@ -20,7 +21,9 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Noto Serif KR', serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    
 }
 
 header,
@@ -103,7 +106,7 @@ img {
     height: 10px;
     position: absolute;
     background-image: linear-gradient(to bottom, rgba(249, 249, 249, 0), rgba(249, 249, 249, 1), rgba(249, 249, 249, 1));
-    margin-top: -15px;
+    margin-top: -14px;
 }
 
 li {
@@ -147,7 +150,7 @@ h3 {
 
 .navbar-button {
     height: 100%;
-    text-decoration: none;
+    text-decoration: underline;
     color: inherit;
     font-family: "Noto Serif KR", sans-serif;
     font-weight: 400;
@@ -157,37 +160,28 @@ h3 {
     float: left;
     margin: auto 5px;
     transition: color ease-in-out 0.2s;
-    transition: font-size ease-in-out 0.15s;
 }
 
 .navbar-button:hover,
 .navbar-button:active {
     color: #b10000;
-    font-size: 18px;
     transition: color ease-in-out 0.2s;
-    transition: font-size ease-in-out 0.15s;
 }
 
 .logo {
     background: url("../images/cammegh_logo.gif");
-    height: 46px;
+    height: 38px;
     background-size: contain;
     background-repeat: no-repeat;
     background-position: left center;
-    margin: 2px 5px;
+    margin: 6px 5px;
     position: relative;
-    transition: height ease-in-out 0.2s;
 }
 
 @media(min-width:992px) {
     .logo {
         background-position: center center;
     }
-}
-
-.logo:hover {
-    height: 44px;
-    transition: height ease-in-out 0.15s;
 }
 
 /*----------------------- Footer */
@@ -592,6 +586,10 @@ hr {
     display: none;
 }
 
+.high-res {
+    display: none;
+}
+
 .active-product-content>p {
     margin-bottom: 5px;
 }
@@ -671,8 +669,9 @@ hr {
 @media(min-width:992px) {
     .selection-tab {
         width: 9.79393%;
-        font-size: 12px;
+        font-size: 11px;
         text-align: center;
+        margin-top: 6px;
     }
     .selection-tab span {
         margin-left: 0;
