@@ -62,7 +62,6 @@ Within Products (in order of importance):
 
 <strong>Clients</strong> - this is the one page that was not defined. Most competitors sites have something similar ([TCS John Huxley](https://www.tcsjohnhuxley.com/) have a scrollbar with links to various casinos they provide for, [Martin Williams](https://www.mwce.co.uk/clients/) have a page that lists countries and customers together), whilst the original Cammegh website has a [Testimonials page](http://www.cammegh.com/testimonial.php)). As such this page was not defined almost until the completion of the rest of the website.
 
-<br>
 
 ## Features
 
@@ -103,61 +102,48 @@ Includes links to all the following pages, and a brief description about each:
 - Includes phone numbers, sales email and support email and working hours
 - Includes Cammegh address and link to Google Maps on small resolutions and Google Maps iframe on larger resolutions
 
+#### Other Functionality
+- I used an adapted version of the 31/01/2017 jQuery solution to [loading high-resolution images](https://stackoverflow.com/questions/27934548/load-a-low-res-background-image-first-then-a-high-res-one) to allow the page to quickly load a low-res image (so the layout of the page loads fast) and when the high-res image has finished loading in the background it swaps the src of the low-res image to the high-res image.
+
 ### Features Left to Implement
-
-#### Products page:
-- Wheels page
-    - *Maybe have pictures of the wheels in the tiles?*
-- Displays page
-    - *Highlight custom surround/pole designs? (Les A/Genting)*
-
+- More space around logo link to home page
+- TNR links, but keep OS font for content
+- Black/background image for contrast
+- Stretch content where necessary (less dead space)
 
 #### Wheel Builder page:
 - *Option of "standard" layouts for selection?*
-- *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork)*
-
-#### Clients page:
-- TBD what goes here. Suspect this will be dictated mostly by Sales
-- *Possibly have a login feature here?*
+- *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork). NOTE: this requires a paid subscription to email.js*
 
 #### Contact Info page:
 - *To include social media links? NOT RECOMMENDED as not updated in forever*
 
-#### Other Functionality
-- Reduce image file sizes to reduce load times.
-    - Use [this](http://compressimage.toolur.com/) to reduce file size
-    - Use something similar to [this](https://stackoverflow.com/questions/27934548/load-a-low-res-background-image-first-then-a-high-res-one) to load high-res files in background, then swap the image once loaded
-
-<br>
 
 ## Technologies Used
 
 - [BootStrap](https://github.com/twbs/bootstrap/tree/v3.3.7)
     - Parts cherry-picked for desired functionality
 - [Fontawesome](https://fontawesome.com/)
-    - Used to various icons in small-screen menu.
+    - Used for various icons in small-screen menu.
 - [Smart Hover](http://www.javascriptkit.com/dhtmltutors/sticky-hover-issue-solutions.shtml)
-    - Used to prevent the hover css state on touch devices. Works well on buttons that navigate elsewhere, not so well on select/de-select buttons on the wheel builder page.
+    - Used to prevent the hover css state on touch devices. Works well on most buttons, but not so well on select/de-select buttons on the wheel builder page. I coded those separately.
 - [Smooth scroll](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1)
-    - Used to scroll smoothly between page sections on the website.
+    - Used to scroll smoothly between page sections on the website. I edited this to allow linking to specific locations on other pages.
 - [Form Submit Modal](https://codepen.io/hanapiers/pen/EXNrGP)
-    - Used to pop-up a confirmation modal on submitting the enquiry form.
+    - Used to pop-up a confirmation modal on submitting the enquiry form on the Wheel Builder page.
 - [GitHub Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
     - Introduced me to the wonder of branches for different levels of functionality and testing.
 
-<br>
 
 ## Testing
 
 
 
-<br>
 
 ## Deployment
 
 
 
-<br>
 
 ## Credits
 
@@ -185,7 +171,6 @@ I received inspiration for this project from the following sources:
 - [Martin Williams Casino Equipment](https://www.mwce.co.uk/)
     - I admired the simple and concise design of this site and the decision to have the width of the page be limited on wider resolutions was influenced heavily by this. Their site also did not have the same brash colour scheme as TCS Huxley, which forced me to thing about the colour palette I was going to use.
 
-This project came about mostly because of two unrelated incidents that just happened to coincide rather nicely with each other. I wanted a way to practice my coding away from the course I am studying and Cammegh had tried unsuccessfully to get a new website off the ground back in 2017. After that effort floundered, I picked up the pieces and did some digging around the company in 2018 to work out what was likely to be needed. Starting out as a pet-project to develop my skills, it eventually garnered the attention of management and it became both part of my job as well as my second stream project for the Code Institute course. This leads on to some acknowledgements of those that helped me, both when this project was in its infancy and when it became a company asset:
+This project came about mostly because of two unrelated incidents that just happened to coincide rather nicely with each other. I wanted a way to practice my coding away from the course I am studying and Cammegh had tried unsuccessfully to get a new website off the ground back in 2017. After that effort floundered, I picked up the pieces and did some digging around the company in 2018 to work out what was likely to be needed. Starting out as a pet-project to develop my skills, it eventually became in-depth and functional enough to be my second stream project for the Code Institute course. This leads on to some acknowledgements of those that helped me, both when this project was in its infancy and when it became a company asset:
 - Rob Foord (Media Production Creator and Coordinator) gave me a wealth of information regarding what had been asked of him when the original idea for a new Cammegh website was given to him. Most of the original ideas for pages came from him and he also showed me some of the preliminary work he did. This kick-started the pet-project part with the idea that it might become a compayn asset later on.
 - Gareth was supportive throughout the project, giving both his time and experience to help me understand JS concepts and provide me with the extensive catalogue of renders that the wheel builder requires to work properly.
-<!-- - Andrew Cammegh is the Sales Director of Cammegh Ltd, and helped me to finalise the project before deployment. His insights into what customers look for on our website, and therefore what tweaks I needed to make, were very helpful. -->

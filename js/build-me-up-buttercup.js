@@ -44,11 +44,9 @@ function activateSelections(id) {
         var checked = $('#' + id)[0].checked;
         if (checked) {
             picFade(pic,`${imageBase}halo.png`);
-            $('#' + id)[0].labels[0].innerHTML = "Halo on";
         }
         else {
             picFade(pic,imageBlank);
-            $('#' + id)[0].labels[0].innerHTML = "Halo off";
         }
     }
     else if (selection.classList.contains("active")) {
