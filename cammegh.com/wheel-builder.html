@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../css/bootstrap-parts.css" type="text/css" />
     <link rel="stylesheet" href="../css/style.css" type="text/css" />
     <link rel="shortcut icon" href="../images/favicon.jpg" />
-    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
-    <script type="text/javascript">
+    <script src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script>
         (function() {
             emailjs.init("user_VdyMfCjVAi2BZ064GZ34C");
         })();
@@ -488,9 +488,9 @@
                                 <form id="turret-type" action="POST">
                                     <span>Turret Type:</span>
                                     <div>
-                                        <input onclick="turretSelection(this.name,this.value)" data type="radio" name="turret-type" value="standard" checked><span>Standard</span>
-                                        <input onclick="turretSelection(this.name,this.value)" data type="radio" name="turret-type" value="french"><span>French</span>
-                                        <input onclick="turretSelection(this.name,this.value)" data type="radio" name="turret-type" value="continental"><span>Continental</span>
+                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-type" value="standard" checked><span>Standard</span>
+                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-type" value="french"><span>French</span>
+                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-type" value="continental"><span>Continental</span>
                                     </div>
                                 </form>
                                 <div class="content-container-filler"></div>
@@ -669,9 +669,9 @@
                                                 in order to give you a formal quote.</p>
                                             <form method="post" name="enquiry-form" id="enquiry-form">
                                                 <p>Name:</p>
-                                                <input required validate id="from_name" type="text">
+                                                <input required id="from_name" type="text">
                                                 <p>Email:</p>
-                                                <input required validate id="from_email" type="text">
+                                                <input required id="from_email" type="text">
                                                 <p>Special Number Arc Sequence: <span class="fine-print">(if applicable)</span></p>
                                                 <input id="special_arc_seq" type="text">
                                                 <div class="content-container-filler"></div>

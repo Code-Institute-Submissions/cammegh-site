@@ -23,7 +23,7 @@ h5,
 h6 {
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
-    
+
 }
 
 header,
@@ -414,9 +414,61 @@ hr {
     min-height: 100px;
 }
 
+.classic {
+    background-image: url('../images/col_classic.jpg');
+}
+
+.connoisseur {
+    background-image: url('../images/col_conn.jpg');
+}
+
+.continental {
+    background-image: url('../images/col_cont.jpg');
+}
+
+.monaco {
+    background-image: url('../images/col_monaco.jpg');
+}
+
+.m360 {
+    background-image: url('../images/col_merc.jpg');
+}
+
+.mini360 {
+    background-image: url('../images/col_mini.jpg');
+}
+
+.rrs {
+    background-image: url('../images/col_rrs.png');
+}
+
+.halo {
+    background-image: url('../images/col_halo.jpg');
+}
+
+.aur360 {
+    background-image: url('../images/col_aurora_2.jpg');
+}
+
+.crystal {
+    background-image: url('../images/col_crystal.jpg');
+}
+
+.ss2 {
+    background-image: url('../images/col_ss2.jpg');
+}
+
+.ss2tt {
+    background-image: url('../images/col_ss2tt.jpg');
+}
+
 .product-button {
     min-height: 270px;
     cursor: pointer;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    color: #f9f9f9;
 }
 
 @media(min-width:350px) {
@@ -465,6 +517,22 @@ hr {
     .product-button {
         min-height: 165px;
     }
+}
+
+.product-button:hover .descriptor.active {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.product-button .descriptor.active p {
+    display: none;
+}
+
+.product-button:hover .descriptor.active p {
+    display: block;
+}
+
+.product-button-container.active-product .product-button {
+    color: black;
 }
 
 .fine-print {
@@ -577,16 +645,14 @@ hr {
     transition: width 0.5s ease-in-out;
 }
 
-.active-product-content {
+.active-product-content,
+.descriptor {
     display: none;
     padding: 5px;
 }
 
-.descriptor {
-    display: none;
-}
-
-.high-res {
+.high-res,
+.tile {
     display: none;
 }
 
