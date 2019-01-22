@@ -24,22 +24,21 @@
 	document.addEventListener('mouseover', removetouchclass, false); //this event gets called when input type is everything from touch to mouse/ trackpad
 })();
 
+// This function here is my own creation. It simply swaps the menu icon on small resolutions for a cross when clicked on, whilst also displaying the menu links.
+// Clicking the cross hides the menu links and reverts to the menu icon.
 $(function() {
+	
+	// This bit swaps menu for cross, and shows the dropdown
     $('.fa-bars').on('click', function() {
         $(this).toggle();
         $('.fa-times').toggle();
         $('.dropdown-menu').fadeIn(250);
     });
+    
+    // This bit swaps cross for menu, and hides the dropdown
     $('.fa-times').on('click', function() {
         $(this).toggle();
         $('.fa-bars').toggle();
         $('.dropdown-menu').fadeOut(250);
-    });
-    $('.dropdown-menu-link').on('click', function() {
-        if ($('.fa-times').css('display') === 'block') {
-            $('.fa-times').toggle();
-            $('.fa-bars').toggle();
-            $('.dropdown-menu').fadeOut(250);
-        }
     });
 });

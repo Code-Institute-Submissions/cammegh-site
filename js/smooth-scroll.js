@@ -1,4 +1,4 @@
-//Copied from https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1.
+//Copied from https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1. Modified to accommodate linking to sections of other pages.
 
 $(document).ready(function() {
     // Add smooth scrolling to all links
