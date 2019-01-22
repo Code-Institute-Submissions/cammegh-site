@@ -410,8 +410,8 @@ hr {
 
 /*----------------------- Product pages */
 
-.product-type-button {
-    min-height: 100px;
+.product-type-img {
+    padding: 5px 10px 0 0;
 }
 
 .classic {
@@ -462,7 +462,11 @@ hr {
     background-image: url('../images/col_ss2tt.jpg');
 }
 
-.product-button {
+.button-tile {
+    cursor: pointer;
+}
+
+.product-button-tile {
     min-height: 270px;
     cursor: pointer;
     background-size: cover;
@@ -472,66 +476,66 @@ hr {
 }
 
 @media(min-width:350px) {
-    .product-button {
+    .product-button-tile {
         min-height: 230px;
     }
 }
 
 @media(min-width:400px) {
-    .product-button {
+    .product-button-tile {
         min-height: 205px;
     }
 }
 
 @media(min-width:450px) {
-    .product-button {
+    .product-button-tile {
         min-height: 185px;
     }
 }
 
 @media(min-width:500px) {
-    .product-button {
+    .product-button-tile {
         min-height: 165px;
     }
 }
 
 @media(min-width:600px) {
-    .product-button {
+    .product-button-tile {
         min-height: 140px;
     }
 }
 
 @media(min-width:768px) {
-    .product-button {
+    .product-button-tile {
         min-height: 165px;
     }
 }
 
 @media(min-width:900px) {
-    .product-button {
+    .product-button-tile {
         min-height: 145px;
     }
 }
 
 @media(min-width:992px) {
-    .product-button {
+    .product-button-tile {
         min-height: 165px;
     }
 }
 
-.product-button:hover .descriptor.active {
+.product-button-tile:hover .descriptor.active {
     background-color: rgba(0, 0, 0, 0.7);
 }
 
-.product-button .descriptor.active p {
+.product-button-tile .descriptor.active p {
     display: none;
 }
 
-.product-button:hover .descriptor.active p {
+.product-button-tile:hover .descriptor.active p {
     display: block;
 }
 
-.product-button-container.active-product .product-button {
+.button-container.active-button .product-button-tile {
     color: black;
 }
 
@@ -628,7 +632,7 @@ hr {
     }
 }
 
-.product-button-container {
+.button-container {
     transition: width 0.5s ease-in-out 0.5s;
 }
 
@@ -639,7 +643,7 @@ hr {
     margin-bottom: 5px;
 }
 
-.active-product,
+.active-button,
 .active-product-header {
     width: 100%;
     transition: width 0.5s ease-in-out;
@@ -648,6 +652,9 @@ hr {
 .active-product-content,
 .descriptor {
     display: none;
+}
+
+.product-button-tile .active-product-content {
     padding: 5px;
 }
 
@@ -867,4 +874,15 @@ hr {
 
 .submit {
     padding: 3px 10px;
+}
+
+
+/*----------------------- Ts and Cs page */
+
+.term {
+    margin-bottom: 10px;
+}
+
+.term-number {
+    text-align: center;
 }

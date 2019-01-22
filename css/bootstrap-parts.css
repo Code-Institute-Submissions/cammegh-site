@@ -597,6 +597,18 @@
   }
 }
 
+@media(max-width: 599px) {
+  .col-xs-12 {
+    width: 100%;
+    display: block;
+    float: left;
+    position: relative;
+  }
+  .col-xs-12 img {
+    max-width: 400px;
+  }
+}
+
 .modal-open {
   overflow: hidden;
 }
