@@ -207,7 +207,7 @@ h3 {
     text-align: center;
     display: block;
     float: left;
-    width: 65%;
+    padding-left: 10px;
 }
 
 .footer-spacer {
@@ -233,14 +233,11 @@ h3 {
     font-weight: 300;
     text-decoration: none;
     transition: color ease-in-out 0.2s;
-    transition: font-size ease-in-out 0.15s;
 }
 
 .footer-button:hover {
     color: #b10000;
-    font-size: 11px;
     transition: color ease-in-out 0.2s;
-    transition: font-size ease-in-out 0.15s;
 }
 
 .can-touch .footer-button:hover {
@@ -249,54 +246,34 @@ h3 {
 }
 
 @media(min-width:350px) {
-    .footer-button:hover {
-        font-size: 12px;
-    }
-    .footer-button,
-    .can-touch .footer-button:hover {
+    .footer-button {
         padding-top: 9px;
         font-size: 13px;
     }
 }
 
 @media(min-width:400px) {
-    .footer-button:hover {
-        font-size: 13px;
-    }
-    .footer-button,
-    .can-touch .footer-button:hover {
+    .footer-button {
         padding-top: 8px;
         font-size: 14px;
     }
 }
 
 @media(min-width:450px) {
-    .footer-button:hover {
-        font-size: 14px;
-    }
-    .footer-button,
-    .can-touch .footer-button:hover {
+    .footer-button {
         font-size: 15px;
     }
 }
 
 @media(min-width:500px) {
-    .footer-button:hover {
-        font-size: 15px;
-    }
-    .footer-button,
-    .can-touch .footer-button:hover {
+    .footer-button {
         padding-top: 7px;
         font-size: 16px;
     }
 }
 
 @media(min-width:550px) {
-    .footer-button:hover {
-        font-size: 16px;
-    }
-    .footer-button,
-    .can-touch .footer-button:hover {
+    .footer-button {
         padding-top: 6px;
         font-size: 17px;
     }
