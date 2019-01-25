@@ -24,15 +24,14 @@
 	document.addEventListener('mouseover', removetouchclass, false); //this event gets called when input type is everything from touch to mouse/ trackpad
 })();
 
-// This function here is my own creation. It finds the dropdown links associated with a dropdown icon and shows only those links. This allows for an ever-expanding
-// dropdown menu instead of the kind that opens to the side of the existing dropdown.
+// This function here is my own creation. It finds the dropdown links associated with a dropdown icon and shows only those links. This allows for an
+// ever-expanding dropdown menu instead of the kind that opens to the side of the existing dropdown.
 $(function() {
     $('.fa').on('click', function() {
         $(this).toggle();
         $(this).siblings('.fa').toggle();
         var assocLink = ($(this)[0].classList[0]);
         $(this).nextAll('.dropdown-menu').fadeToggle(250);
-        $(this).nextAll('.dropdown-menu-small').fadeToggle(250);
         $('.'+assocLink).not('i').slideToggle(250);
     });
 });

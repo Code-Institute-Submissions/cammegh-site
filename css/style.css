@@ -298,28 +298,12 @@ h3 {
     display: none;
 }
 
-.dropdown-menu-small {
-    display: none;
-    position: absolute;
-    background-color: #232323;
-    min-width: 160px;
-    margin: 50px auto 0;
-    left: 0%;
-    width: 100vw;
-    text-align: left;
-    clear: both;
-    max-height: 70vh;
-    max-width: 200px;
-    overflow: auto;
-}
-
 .dropdown-menu {
     display: none;
     position: absolute;
     background-color: #232323;
     min-width: 160px;
     margin: 50px auto 0;
-    right: 0%;
     width: 100vw;
     text-align: left;
     clear: both;
@@ -327,7 +311,15 @@ h3 {
     overflow: auto;
 }
 
-.dropdown-menu-small div div a,
+.dropdown-menu-large {
+    right: 0%;
+}
+
+.dropdown-menu-small {
+    left: 0%;
+    max-width: 200px;
+}
+
 .dropdown-menu div div a {
     display: block;
     text-decoration: none;
@@ -340,12 +332,11 @@ h3 {
     transition: color ease-in-out 0.15s;
 }
 
-.dropdown-menu-small div:nth-child(even) div a,
 .dropdown-menu div:nth-child(even)+[style="display: block;"] div a {
     background: #3a3a3a;
 }
 
-.dropdown-menu-small div div a:hover,
+.dropdown-menu div:nth-child(even)+[style="display: block;"] div a:hover,
 .dropdown-menu div div a:hover {
     color: #b10000;
     background-color: #111111;
