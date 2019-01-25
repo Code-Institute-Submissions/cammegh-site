@@ -294,6 +294,25 @@ h3 {
     transition: color ease-in-out 0.1s;
 }
 
+.dropdown-link {
+    display: none;
+}
+
+.dropdown-menu-small {
+    display: none;
+    position: absolute;
+    background-color: #232323;
+    min-width: 160px;
+    margin: 50px auto 0;
+    left: 0%;
+    width: 100vw;
+    text-align: left;
+    clear: both;
+    max-height: 70vh;
+    max-width: 200px;
+    overflow: auto;
+}
+
 .dropdown-menu {
     display: none;
     position: absolute;
@@ -303,9 +322,13 @@ h3 {
     right: 0%;
     width: 100vw;
     text-align: left;
+    clear: both;
+    max-height: 70vh;
+    overflow: auto;
 }
 
-.dropdown-menu a {
+.dropdown-menu-small div div a,
+.dropdown-menu div div a {
     display: block;
     text-decoration: none;
     color: #fafafa;
@@ -317,11 +340,13 @@ h3 {
     transition: color ease-in-out 0.15s;
 }
 
-.dropdown-menu a:nth-child(even) {
+.dropdown-menu-small div:nth-child(even) div a,
+.dropdown-menu div:nth-child(even)+[style="display: block;"] div a {
     background: #3a3a3a;
 }
 
-.dropdown-menu a:hover {
+.dropdown-menu-small div div a:hover,
+.dropdown-menu div div a:hover {
     color: #b10000;
     background-color: #111111;
     transition: background-color ease-in-out 0.15s;
@@ -629,6 +654,11 @@ hr {
 .active-product-content,
 .descriptor {
     display: none;
+}
+
+.descriptor {
+    padding-left: 5px;
+    padding-top: 5px;
 }
 
 .product-button-tile .active-product-content {
