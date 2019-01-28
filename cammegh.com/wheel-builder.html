@@ -185,8 +185,8 @@
                                 <form id="toprim-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="finishSelection(this.name,this.value)" id="toprim-gloss" type="radio" name="toprim-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="finishSelection(this.name,this.value)" id="toprim-matt" type="radio" name="toprim-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="toprim-gloss" type="radio" name="toprim-value" value="gloss" checked><span>Gloss</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="toprim-matt" type="radio" name="toprim-value" value="matt"><span>Matt</span>
                                         <input onclick="activateSelections(this.id)" id="halo-check" type="checkbox" name="halo-check" value="halo">
                                         <label for="halo-check" style="cursor: pointer;">Halo</label>
                                     </div>
@@ -241,8 +241,8 @@
                                 <form id="balltrack-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="finishSelection(this.name,this.value)" id="balltrack-gloss" type="radio" name="balltrack-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="finishSelection(this.name,this.value)" id="balltrack-matt" type="radio" name="balltrack-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="balltrack-gloss" type="radio" name="balltrack-value" value="gloss" checked><span>Gloss</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="balltrack-matt" type="radio" name="balltrack-value" value="matt"><span>Matt</span>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -295,8 +295,8 @@
                                 <form id="cone-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="finishSelection(this.name,this.value)" id="cone-gloss" type="radio" name="cone-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="finishSelection(this.name,this.value)" id="cone-matt" type="radio" name="cone-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="cone-gloss" type="radio" name="cone-value" value="gloss" checked><span>Gloss</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="cone-matt" type="radio" name="cone-value" value="matt"><span>Matt</span>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -357,8 +357,8 @@
                                 <form id="outerbowl-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="finishSelection(this.name,this.value)" id="outerbowl-gloss" type="radio" name="outerbowl-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="finishSelection(this.name,this.value)" id="outerbowl-matt" type="radio" name="outerbowl-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-gloss" type="radio" name="outerbowl-value" value="gloss" checked><span>Gloss</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-matt" type="radio" name="outerbowl-value" value="matt"><span>Matt</span>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -620,10 +620,10 @@
                                 <form id="ballstops-value" action="POST">
                                     <span>Ball Stop Quantity:</span>
                                     <div style="display:inline-block">
-                                        <input onclick="finishSelection(this.name,this.value)" type="radio" name="ballstops-value" value="8" checked><span>8</span>
-                                        <input onclick="finishSelection(this.name,this.value)" type="radio" name="ballstops-value" value="12"><span>12</span>
-                                        <input onclick="finishSelection(this.name,this.value)" type="radio" name="ballstops-value" value="14"><span>14</span>
-                                        <input onclick="finishSelection(this.name,this.value)" type="radio" name="ballstops-value" value="16"><span>16</span>
+                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="8" checked><span>8</span>
+                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="12"><span>12</span>
+                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="14"><span>14</span>
+                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="16"><span>16</span>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -803,6 +803,8 @@
 				<div class="col-12">
 					<div class="top-return">
 						<a class="footer-button" href="terms.html">Terms & Conditions</a>
+						<span>&nbsp; | &nbsp;</span>
+						<a class="footer-button" href="https://twitter.com/cammeghgaming?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
 					</div>
 				</div>
 			</div>

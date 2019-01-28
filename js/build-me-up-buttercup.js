@@ -106,7 +106,7 @@ function activateSelections(id) {
     else if (possSelections[0] && possSelections[0].classList.contains((`psu`))) {
         picFade(pic, `${imageBase}${possSelections[0].id}.png`);
     }
-    
+
     // Separator & number arc selection. I offloaded this into its own function as it is rather complicated
     else {
         pocketsSelection();
@@ -125,15 +125,15 @@ function activateSelections(id) {
 // If only a separator is selected, get the number of pockets it should have from the radio buttons in the number arc tab, and load the appropriate image
 // If neither are selected, load both image layers as empty background images
 function pocketsSelection() {
-    
+
     // Starts by getting the radio buttons for the number of pockets and storing them in pocketVals. Also initialises pocketsVal to hold the selected radio button
     var pocketVals = document.getElementsByName(`numberarc-pockets`);
     var pocketsVal;
-    
+
     // Loop through the containers that contain the different number arc options for each pocket quantity and remove the 'active' class (thereby hiding them)
     for (i = 0; i < 3; i++) {
         document.getElementsByClassName(`numberarc-pockets arc-container`)[i].classList.remove(`active`);
-        
+
         // While looping, when you find the checked radio button, assign that value to the previously initialised pocketsVal variable (can be 37, 38 or 39 atm. There
         // may eventually be more but that depends on how mad casinos want to get. Lastly, add the 'active' class to the container that contains the associated number
         // arcs.
@@ -142,7 +142,7 @@ function pocketsSelection() {
             document.getElementById(`numberarc-pockets-${pocketsVal}`).classList.add(`active`);
         }
     }
-    
+
     // Get the selected 'number arc' and 'separator' options, initialise several variables for later use and get the image elements for 'number arc' and 'separator'
     // layers.
     var arcSelection = document.getElementsByClassName(`numberarc selection-list-option active`)[0];
@@ -153,18 +153,18 @@ function pocketsSelection() {
     var sepStyle;
     var arcPic = document.getElementById(`numberarc`);
     var sepPic = document.getElementById(`separator`);
-    
+
     // If there is a number arc selected, get the id of that number arc and split it, assigning the number of pockets it has to the arcPockets variable
     if (arcSelection) {
         arcId = arcSelection.id;
         arcPockets = arcSelection.id.split("-")[1];
     }
-    
+
     // If there is a separator selected, get the id of that separator and the available separator style options
     if (sepSelection) {
         sepId = sepSelection.id;
         var sepStyles = document.getElementsByName(`separator-style`);
-        
+
         // Check which separator style option is selected and set its value to sepStyle
         for (i = 0; i < 2; i++) {
             if (sepStyles[i].checked === true) {
@@ -172,25 +172,25 @@ function pocketsSelection() {
             }
         }
     }
-    
+
     // If both a number arc and separator are selected, fade both existing images out, swap the src (incorporating previously set variables) and load images back in
     if (arcSelection && sepSelection) {
         picFade(arcPic, `${imageBase}${arcId}.png`);
         picFade(sepPic, `${imageBase}${sepId}-${arcPockets}-${sepStyle}.png`);
     }
-    
+
     // If only a number arc is selected, fade both existing images out, swap the src (incorporating previously set variables) and load images back in
     else if (arcSelection && !sepSelection) {
         picFade(arcPic, `${imageBase}${arcId}.png`);
         picFade(sepPic, imageBlank);
     }
-    
+
     // If only a separator is selected, fade both existing images out, swap the src (incorporating previously set variables) and load images back in
     else if (sepSelection && !arcSelection) {
         picFade(arcPic, imageBlank);
         picFade(sepPic, `${imageBase}${sepId}-${pocketsVal}-${sepStyle}.png`);
     }
-    
+
     // If neither a separator nor a number arc is selected, fade both existing images out and replace with empty background image
     else {
         picFade(arcPic, imageBlank);
@@ -215,14 +215,11 @@ function turretSelection(name, value) {
     // layer in the wheel render)
     var allTurrets = $('.' + base);
     var possTurrets = $([]);
-    var pic = $('#' + base);
 
     // If there is a selected turret, and that turret has as a class the style that is selected from the radio buttons, then do the following:
     // Get the image element for the turret layer and the id of the selected turret, then use picFade() to load that turret image
     if (selection && selection.hasClass(value)) {
-        var picLoc = pic[0];
-        var selectionId = selection[0].id;
-        picFade(picLoc, `${imageBase}${selectionId}-${value}.png`);
+        radioSelection(name,checkedVal);
     }
 
     // For each turret, if it has the style that is selected as a class, add it to the possTurrets array. For each turret, also add to the element two parents above
@@ -239,6 +236,16 @@ function turretSelection(name, value) {
     possTurrets.each(function() {
         $(this).parent().parent().removeClass("arc-container");
     });
+}
+
+function radioSelection(name, value) {
+    var base = name.split("-")[0];
+    var selection = $('.' + base + '.selection-list-option.active').first();
+    var pic = $('#' + base)[0];
+    if (selection[0]) {
+        var selectionId = selection[0].id;
+        picFade(pic, `${imageBase}${selectionId}-${value}.png`);
+    }
 }
 
 function reviewFill() {
