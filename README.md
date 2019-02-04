@@ -4,7 +4,6 @@ This is my rebuild of the [Cammegh](http://www.cammegh.com/index.php) website us
 
 My aim is to bring the website forward since the last time it was updated a decade ago and give it a fresh new look, with user friendly links, sizing and content. I believe I can manage this through rigorous testing and a simple design that still contains all of the necessary information a user, whether commercial or individual, would need. Given the outdated nature of the existing site, I believed that rebuilding from scratch was the best way to start.
 
-<br>
 
 ## UX
 
@@ -44,23 +43,23 @@ I decided early on, based on information from the Code Institute course and look
 
 The pages were defined as follows:
 
-<strong>Home</strong> - the landing page for the website. Following examples of competitors, should include a high-res, full-width picture and some text (to be decided upon).
+**Home** - the landing page for the website. Following examples of competitors, should include a high-res, full-width picture and some text (to be decided upon).
 
-<strong>Products</strong> - to include boxes that link to each product category with a title and a brief description of the category.
+**Products** - to include boxes that link to each product category with a title and a brief description of the category.
 
 Within Products (in order of importance):
 
-- <strong>Roulette Wheels</strong> - to include all standard manufactured roulette wheels, with descriptions, pictures and highlighting features of each
-- <strong>Billboard Displays</strong> - to include all standard variations in displays
-- <strong>Billboard Graphics</strong> - to include all standard graphics produced, what hardware they work with and highlighting features of each
-- <strong>Licences</strong> - to include all licences available for purchase, highlighting features, betting odds and options
-- <strong>Accessories</strong> - to include all standard accessories manufactured/sold by Cammegh
+- **Roulette Wheels** - to include all standard manufactured roulette wheels, with descriptions, pictures and highlighting features of each
+- **Billboard Displays** - to include all standard variations in displays
+- **Billboard Graphics** - to include all standard graphics produced, what hardware they work with and highlighting features of each
+- **Licences** - to include all licences available for purchase, highlighting features, betting odds and options
+- **Accessories** - to include all standard accessories manufactured/sold by Cammegh
 
-<strong>Wheel Builder</strong> - page that will produce a render of a roulette wheel based on selections made by the user. Must include a section that allows the user to email their selections to themselves and an option for the Cammegh Sales team to be cc'ed into said email.
+**Wheel Builder** - page that will produce a render of a roulette wheel based on selections made by the user. Must include a section that allows the user to email their selections to themselves and an option for the Cammegh Sales team to be cc'ed into said email.
 
-<strong>Contact Info</strong> - standard affair of phone numbers and emails for both Sales and Support staff, and Google Maps image/API to show where the company is located for those who want to visit. *I later decided to add opening hours to this page.*
+**Contact Info** - standard affair of phone numbers and emails for both Sales and Support staff, and Google Maps image/API to show where the company is located for those who want to visit. *I later decided to add opening hours to this page.*
 
-<strong>Clients</strong> - this is the one page that was not defined. Most competitors sites have something similar ([TCS John Huxley](https://www.tcsjohnhuxley.com/) have a scrollbar with links to various casinos they provide for, [Martin Williams](https://www.mwce.co.uk/clients/) have a page that lists countries and customers together), whilst the original Cammegh website has a [Testimonials page](http://www.cammegh.com/testimonial.php)). As such this page was not defined almost until the completion of the rest of the website.
+**Clients** - this is the one page that was not defined. Most competitors sites have something similar ([TCS John Huxley](https://www.tcsjohnhuxley.com/) have a scrollbar with links to various casinos they provide for, [Martin Williams](https://www.mwce.co.uk/clients/) have a page that lists countries and customers together), whilst the original Cammegh website has a [Testimonials page](http://www.cammegh.com/testimonial.php)). As such this page was not defined almost until the completion of the rest of the website.
 
 
 ## Features

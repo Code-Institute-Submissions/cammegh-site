@@ -133,7 +133,7 @@
       // Stops any touches on the container from scrolling the page:
       disableScroll: true,
       // Carousel mode (shortcut for carousel specific options):
-      carousel: false,
+      carousel: true,
       // Allow continuous navigation, moving from last to first
       // and from first to last slide:
       continuous: true,
@@ -150,7 +150,7 @@
       // The number of elements to load around the current index:
       preloadRange: 2,
       // The transition speed between slide changes in milliseconds:
-      transitionSpeed: 400,
+      transitionSpeed: 600,
       // The transition speed for automatic slide changes, set to an integer
       // greater 0 to override the default transition speed:
       slideshowTransitionSpeed: undefined,
@@ -187,9 +187,9 @@
 
     carouselOptions: {
       hidePageScrollbars: false,
-      toggleControlsOnReturn: false,
-      toggleSlideshowOnSpace: false,
-      enableKeyboardNavigation: false,
+      toggleControlsOnReturn: true,
+      toggleSlideshowOnSpace: true,
+      enableKeyboardNavigation: true,
       closeOnEscape: false,
       closeOnSlideClick: false,
       closeOnSwipeUpOrDown: false,
