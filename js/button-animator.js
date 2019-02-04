@@ -21,19 +21,21 @@ $(function() {
             // remove the active-button class from the parent of the target of toggleButtonOff(). This has the effect of shrinking the width (via css)
             param.parent().removeClass('active-button');
 
-            // There are 2 descriptor boxes per roulette wheel on the roulette-wheels.html page, hence the first() and last() functions. This function fades out the
-            // first descriptor and fades in the second.
+            // There are 2 descriptor boxes per roulette wheel on the roulette-wheels.html page, hence the first() and last() functions. This function fades out the first descriptor and fades in the second.
             function fade(time) {
-                param.find($('.descriptor')).first().delay(time).fadeIn(300);
-                param.find($('.descriptor')).last().fadeOut(500);
+                param.find($('.descriptor.descriptor-active')).first().delay(time).fadeIn(300);
+                param.find($('.descriptor')).not('.descriptor-active').fadeOut(500);
             }
 
             // If their is an image available for the button-tile, load it in at the same time as fading the descriptor
             if (path !== undefined) {
-                fade(900);
                 setTimeout(function() {
                     param.css('background-image', 'url("' + path + '")');
                 }, 900);
+                fade(900);
+            }
+            else {
+                fade(500);
             }
         }
 
@@ -45,17 +47,14 @@ $(function() {
         // Otherwise, if you clicked on a product tile that was not open, do the following:
         else {
 
-            // Close all open tiles (there should only be one, but in case someone has been fiddling with the HTML in Chrome Dev Tools or equivalent) by calling
-            // toggleButtonOff() on all product tiles
+            // Close all open tiles (there should only be one, but in case someone has been fiddling with the HTML in Chrome Dev Tools or equivalent) by calling toggleButtonOff() on all product tiles
             $('.button-tile').each(function() {
                 if ($(this).parent().hasClass('active-button')) {
                     toggleButtonOff($(this));
                 }
             });
 
-            // These next lines are basically just the reverse of toggleButtonOff(). Add the active-button class to have the box increase in width (if it can), switch 
-            // the background image to the default off-white colour, fadeOut the title + bumph and after a delay fadeIn the title on its own. Finally, slideDown the
-            // content to show it.
+            // These next lines are basically just the reverse of toggleButtonOff(). Add the active-button class to have the box increase in width (if it can), switch the background image to the default off-white colour, fadeOut the title + bumph and after a delay fadeIn the title on its own. Finally, slideDown the content to show it.
             $(this).parent().addClass('active-button');
             var divs = $(this).find('.active-product-content');
 
@@ -64,14 +63,18 @@ $(function() {
                     $(this).delay(time).slideDown(500);
                 });
             }
-            if ($(this).find('.tile').attr('src') !== undefined) {
+            if ($(this).find('.tile').attr('src') !== 'undefined') {
                 $(this).css('background-image', 'inherit');
-                $(this).find($('.descriptor')).first().fadeOut(500);
-                $(this).find($('.descriptor')).last().delay(500).fadeIn(500);
-                slideDivs(500);
+            }
+            if ($(this).find('.descriptor').length > 1) {
+                $(this).find($('.descriptor.descriptor-active')).first().fadeOut(500);
+                $(this).find($('.descriptor')).not('.descriptor-active').each(function(){
+                    $(this).delay(500).fadeIn(500);
+                });
+                slideDivs(900);
             }
             else {
-                slideDivs(0);
+                slideDivs(500);
             }
         }
     });

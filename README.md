@@ -34,9 +34,9 @@ I realised early on that more functionality was going to be required, and is out
 - JavaScript possibly required to deal with "sticky hover" from touch-screen devices when deselecting options on the wheel builder page
 - Scaling text and boxes so site is usable on multiple resolutions
 - Google Maps API and/or link to Google Maps for company address, as picture on existing website does not scale
-- Quantity of content will require a return-to-top button on several pages, better to include on all pages
+- Quantity of content may require a return-to-top button on several pages, better to include on all pages
 - Roulette wheel page will be huge given range of variations in the product, may require expanding boxes *(when clicked on?)*
-- Pictures may require reduced file-size versions to limit load times
+- Pictures may require reduced file-size versions to limit page-styling load times
 
 ### Structure
 
@@ -74,19 +74,21 @@ Within Products (in order of importance):
 #### Products page:
 Includes links to all the following pages, and a brief description about each:
 - Wheels page
-    - Includes all available wheels produced
+    - Includes all available wheels produced with pictures
     - Includes expanding boxes for all wheels produced, highlighting their features
 - Displays page
     - Includes all available sizes, with information on them
     - Emphasis on viewing angles, clarity of picture
     - Includes info on orientation, LEDs, custom colours for surrounds, poles
+    - Different items not in expanding boxes as only three of them, therefore deemed unnecessary
 - Billboard Graphics page
     - Includes all graphics that are not related to licencing
-    - Currently has multiboard graphics on this page (*may move this to licences page later*)
+    - All graphics in separate expanding boxes
  - Licences page
-    - Need more info as I know next to nothing about this product type
+    - Includes information and helpful pictures on all kinds of licencing currently provided by Cammegh (as of end of 2018)
+    - All licences in separate expanding boxes (similar to wheels page)
 - Accessories page
-    - To include all available accessories sold (balls, dollies, table layouts, levellers, etc.)
+    - Includes all available accessories sold (balls, dollies, table layouts, levellers, etc.)
 
 #### Wheel Builder page:
 - Includes render of wheel
@@ -99,24 +101,29 @@ Includes links to all the following pages, and a brief description about each:
     - Correctly adds/removes cc for Sales based on checkbox
 
 #### Contact Info page:
-- Includes phone numbers, sales email and support email and working hours
+- Includes phone numbers, sales and support emails and working hours
 - Includes Cammegh address and link to Google Maps on small resolutions and Google Maps iframe on larger resolutions
+
+#### Ts and Cs page:
+- Copied content directly from existing Cammegh website
+- Used expanding boxes
+
+#### Gallery page:
+- Downloaded Sebastian Tschan (aka blueimp)'s [gallery script](https://github.com/blueimp/Gallery) and populated it with images for the gallery
+- Minor tweaks made to downloaded blueimp-gallery.js for desired functionality (clicking thumbnails opens in exissting carousel as opposed to modal-like widget, clicking thumbnails no longer sets overflow = hidden on the body tag).
 
 #### Other Functionality
 - I used an adapted version of the 31/01/2017 jQuery solution to [loading high-resolution images](https://stackoverflow.com/questions/27934548/load-a-low-res-background-image-first-then-a-high-res-one) to allow the page to quickly load a low-res image (so the layout of the page loads fast) and when the high-res image has finished loading in the background it swaps the src of the low-res image to the high-res image.
 
 ### Features Left to Implement
-- More space around logo link to home page
-- TNR links, but keep OS font for content
-- Black/background image for contrast
-- Stretch content where necessary (less dead space)
+
+#### Products - Roulette Wheels page:
+- *Different veneers/finishes available?*
 
 #### Wheel Builder page:
 - *Option of "standard" layouts for selection?*
 - *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork). NOTE: this requires a paid subscription to email.js*
 
-#### Contact Info page:
-- *To include social media links? NOT RECOMMENDED as not updated in forever*
 
 
 ## Technologies Used
@@ -133,16 +140,19 @@ Includes links to all the following pages, and a brief description about each:
     - Used to pop-up a confirmation modal on submitting the enquiry form on the Wheel Builder page.
 - [GitHub Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging)
     - Introduced me to the wonder of branches for different levels of functionality and testing.
+- [blueimp Gallery](https://github.com/blueimp/Gallery)
+    - Used to make the gallery. Minor tweaks to js file for desired functionality (see above).
 
 
 ## Testing
-
-
+- All pages viewed on Chrome, Edge, Safari and Firefox to check layout consistency.
+- All pages viewed at mobile and tablet resolutions to check responsiveness.
+- Links tested on all mentioned browsers to ensure no stray links or bugs.
 
 
 ## Deployment
 
-
+This website was uploaded to GitHub and (will be) deployed to [GitHub Pages]()
 
 
 ## Credits
@@ -157,7 +167,7 @@ Includes links to all the following pages, and a brief description about each:
     - Cherry-picked sections from https://github.com/twbs/bootstrap/tree/v3.3.7.
 
 ### Content
-- The majority of the information is taken from the existing Cammegh website (http://www.cammegh.com/index.php) and the 2018 Cammegh Brochure (http://www.cammegh.com/files/Cammegh_Brochure.pdf).
+- The majority of the information is taken from the existing Cammegh website (http://www.cammegh.com/index.php) and the 2018 Cammegh Brochure (images/Brochure 2018 v5 Screen.pdf).
 
 ### Media
 - Renders for the Wheel Builder page were provided by Gareth Tilt (Graphics and Software Development).
@@ -171,6 +181,6 @@ I received inspiration for this project from the following sources:
 - [Martin Williams Casino Equipment](https://www.mwce.co.uk/)
     - I admired the simple and concise design of this site and the decision to have the width of the page be limited on wider resolutions was influenced heavily by this. Their site also did not have the same brash colour scheme as TCS Huxley, which forced me to thing about the colour palette I was going to use.
 
-This project came about mostly because of two unrelated incidents that just happened to coincide rather nicely with each other. I wanted a way to practice my coding away from the course I am studying and Cammegh had tried unsuccessfully to get a new website off the ground back in 2017. After that effort floundered, I picked up the pieces and did some digging around the company in 2018 to work out what was likely to be needed. Starting out as a pet-project to develop my skills, it eventually became in-depth and functional enough to be my second stream project for the Code Institute course. This leads on to some acknowledgements of those that helped me, both when this project was in its infancy and when it became a company asset:
-- Rob Foord (Media Production Creator and Coordinator) gave me a wealth of information regarding what had been asked of him when the original idea for a new Cammegh website was given to him. Most of the original ideas for pages came from him and he also showed me some of the preliminary work he did. This kick-started the pet-project part with the idea that it might become a compayn asset later on.
+This project came about mostly because of two unrelated incidents that just happened to coincide rather nicely with each other. I wanted a way to practice my coding away from the course I am studying and Cammegh had tried unsuccessfully to get a new website off the ground back in 2017. After that effort floundered, I picked up the pieces and did some digging around the company in 2018 to work out what was likely to be needed. Starting out as a pet-project to develop my skills, it eventually became in-depth and functional enough to be my second stream project for the Code Institute course. This leads on to some acknowledgements of those that helped me, both when this project was in its infancy and when it became the official stream project:
+- Rob Foord (Media Production Creator and Coordinator) gave me a wealth of information regarding what had been asked of him when the original idea for a new Cammegh website was given to him. Most of the original ideas for pages came from him and he also showed me some of the preliminary work he did. This kick-started the pet-project part with the idea that it might become a company asset later on.
 - Gareth was supportive throughout the project, giving both his time and experience to help me understand JS concepts and provide me with the extensive catalogue of renders that the wheel builder requires to work properly.

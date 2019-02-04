@@ -171,6 +171,144 @@
   display: none;
 }
 
+@media (min-width: 500px) {
+  .show-smlr {
+    display: inline;
+  }
+  .col-smlr-1,
+  .col-smlr-2,
+  .col-smlr-3,
+  .col-smlr-4,
+  .col-smlr-5,
+  .col-smlr-6,
+  .col-smlr-7,
+  .col-smlr-8,
+  .col-smlr-9,
+  .col-smlr-10,
+  .col-smlr-11,
+  .col-smlr-12 {
+    float: left;
+    display: block;
+  }
+  .col-smlr-12 {
+    width: 100%;
+  }
+  .col-smlr-11 {
+    width: 91.66666667%;
+  }
+  .col-smlr-10 {
+    width: 83.33333333%;
+  }
+  .col-smlr-9 {
+    width: 75%;
+  }
+  .col-smlr-8 {
+    width: 66.66666667%;
+  }
+  .col-smlr-7 {
+    width: 58.33333333%;
+  }
+  .col-smlr-6 {
+    width: 50%;
+  }
+  .col-smlr-5 {
+    width: 41.66666667%;
+  }
+  .col-smlr-4 {
+    width: 33.33333333%;
+  }
+  .col-smlr-3 {
+    width: 25%;
+  }
+  .col-smlr-2 {
+    width: 16.66666667%;
+  }
+  .col-smlr-1 {
+    width: 8.33333333%;
+  }
+  .col-smlr-pull-12 {
+    right: 100%;
+  }
+  .col-smlr-pull-11 {
+    right: 91.66666667%;
+  }
+  .col-smlr-pull-10 {
+    right: 83.33333333%;
+  }
+  .col-smlr-pull-9 {
+    right: 75%;
+  }
+  .col-smlr-pull-8 {
+    right: 66.66666667%;
+  }
+  .col-smlr-pull-7 {
+    right: 58.33333333%;
+  }
+  .col-smlr-pull-6 {
+    right: 50%;
+  }
+  .col-smlr-pull-5 {
+    right: 41.66666667%;
+  }
+  .col-smlr-pull-4 {
+    right: 33.33333333%;
+  }
+  .col-smlr-pull-3 {
+    right: 25%;
+  }
+  .col-smlr-pull-2 {
+    right: 16.66666667%;
+  }
+  .col-smlr-pull-1 {
+    right: 8.33333333%;
+  }
+  .col-smlr-pull-0 {
+    right: auto;
+  }
+  .col-smlr-push-12 {
+    left: 100%;
+  }
+  .col-smlr-push-11 {
+    left: 91.66666667%;
+  }
+  .col-smlr-push-10 {
+    left: 83.33333333%;
+  }
+  .col-smlr-push-9 {
+    left: 75%;
+  }
+  .col-smlr-push-8 {
+    left: 66.66666667%;
+  }
+  .col-smlr-push-7 {
+    left: 58.33333333%;
+  }
+  .col-smlr-push-6 {
+    left: 50%;
+  }
+  .col-smlr-push-5 {
+    left: 41.66666667%;
+  }
+  .col-smlr-push-4 {
+    left: 33.33333333%;
+  }
+  .col-smlr-push-3 {
+    left: 25%;
+  }
+  .col-smlr-push-2 {
+    left: 16.66666667%;
+  }
+  .col-smlr-push-1 {
+    left: 8.33333333%;
+  }
+  .col-smlr-push-0 {
+    left: auto;
+  }
+  .hidden-smlr {
+    display: none;
+  }
+}
+
 @media (min-width: 768px) {
   .show-sm {
     display: inline;

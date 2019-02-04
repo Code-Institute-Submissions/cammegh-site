@@ -224,7 +224,7 @@ h3 {
 }
 
 .footer-button {
-    display: block;
+    display: inline-block;
     font-family: "Noto Serif KR", sans-serif;
     padding-top: 10px;
     padding-bottom: 8px;
@@ -883,4 +883,20 @@ hr {
 
 .term-number {
     text-align: center;
+}
+
+
+/*----------------------- Gallery page */
+
+#links {
+    overflow-x: hidden;
+    height: 70px;
+}
+
+#links a {
+    display: inline-block;
+}
+
+label {
+    cursor: pointer;
 }
