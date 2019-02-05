@@ -643,7 +643,9 @@ hr {
 }
 
 .active-product-content,
-.descriptor {
+.descriptor,
+.high-res,
+.tile {
     display: none;
 }
 
@@ -654,11 +656,6 @@ hr {
 
 .product-button-tile .active-product-content {
     padding: 5px;
-}
-
-.high-res,
-.tile {
-    display: none;
 }
 
 .active-product-content>p {
@@ -891,6 +888,7 @@ hr {
 #links {
     overflow-x: hidden;
     height: 70px;
+    display: block;
 }
 
 #links a {
@@ -899,4 +897,8 @@ hr {
 
 label {
     cursor: pointer;
+}
+
+.links {
+    display: none;
 }

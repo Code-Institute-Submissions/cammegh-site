@@ -148,10 +148,15 @@ Includes links to all the following pages, and a brief description about each:
 - All pages viewed at mobile and tablet resolutions to check responsiveness.
 - Links tested on all mentioned browsers to ensure no stray links or bugs.
 
+### Known Bugs
+- Changing the filter on the Gallery page causes the titles for the pictures to not display in the carousel
+- Changing the image in the carousel by selecting one from the thumbnails below messes up the titles, jumping around between selections before eventually settling back to normal. It seems that cycling through the images in a filter twice using the arrow buttons forces the titles to behave.
+
 
 ## Deployment
 
-This website was uploaded to GitHub and (will be) deployed to [GitHub Pages]()
+This website was uploaded to GitHub and (will be) deployed to [GitHub Pages]().
+Some of its time was spent being uploaded to [BitBucket](https://bitbucket.org/) instead due to the sensitive nature of the content and images.
 
 
 ## Credits
@@ -164,6 +169,8 @@ This website was uploaded to GitHub and (will be) deployed to [GitHub Pages]()
     - Taken from https://www.w3schools.com/howto/howto_css_smooth_scroll.asp#section1.
 - Layout basics
     - Cherry-picked sections from https://github.com/twbs/bootstrap/tree/v3.3.7.
+- Gallery section
+    - Taken from https://github.com/blueimp/Gallery. All credit and rights to this code are property of the designer, Sebastian Tschan. Available under MIT license.
 
 ### Content
 - The majority of the information is taken from the existing Cammegh website (http://www.cammegh.com/index.php) and the 2018 Cammegh Brochure (images/Brochure 2018 v5 Screen.pdf).
@@ -181,5 +188,6 @@ I received inspiration for this project from the following sources:
     - I admired the simple and concise design of this site and the decision to have the width of the page be limited on wider resolutions was influenced heavily by this. Their site also did not have the same brash colour scheme as TCS Huxley, which forced me to thing about the colour palette I was going to use.
 
 This project came about mostly because of two unrelated incidents that just happened to coincide rather nicely with each other. I wanted a way to practice my coding away from the course I am studying and Cammegh had tried unsuccessfully to get a new website off the ground back in 2017. After that effort floundered, I picked up the pieces and did some digging around the company in 2018 to work out what was likely to be needed. Starting out as a pet-project to develop my skills, it eventually became in-depth and functional enough to be my second stream project for the Code Institute course. This leads on to some acknowledgements of those that helped me, both when this project was in its infancy and when it became the official stream project:
+
 - Rob Foord (Media Production Creator and Coordinator) gave me a wealth of information regarding what had been asked of him when the original idea for a new Cammegh website was given to him. Most of the original ideas for pages came from him and he also showed me some of the preliminary work he did. This kick-started the pet-project part with the idea that it might become a company asset later on.
 - Gareth was supportive throughout the project, giving both his time and experience to help me understand JS concepts and provide me with the extensive catalogue of renders that the wheel builder requires to work properly.
