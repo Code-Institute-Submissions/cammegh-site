@@ -251,7 +251,6 @@ function radioSelection(name, value) {
 function reviewFill() {
     var reviewSpans = [];
     var spanIds = [];
-    var active
     var spans = document.getElementsByTagName(`span`);
     for (i = 0; i < spans.length; i++) {
         if (spans[i].hasAttribute(`data-id`)) {
@@ -264,9 +263,9 @@ function reviewFill() {
         var selection = document.getElementsByClassName(`${spanIds[i]} selection-list-option active`)[0];
         if (selection) {
             // Deals with lacquered sections that have matt or glass finish
-            if (i < 4) {
+            if (i < 5) {
                 var finishSelected;
-                var finishes = document.getElementsByName(`${spanIds[i]}-finish`);
+                var finishes = document.getElementsByName(`${spanIds[i]}-value`);
                 for (j = 0; j < finishes.length; j++) {
                     if (finishes[j].checked === true) {
                         var checkedVal = finishes[j].value;
@@ -288,7 +287,7 @@ function reviewFill() {
             }
             // Deals with turret quirks
             else if (spanIds[i] === "turret") {
-                var turTyps = document.getElementsByName(`turret-type`);
+                var turTyps = document.getElementsByName(`turret-value`);
                 var turTypVal;
                 for (j = 0; j < turTyps.length; j++) {
                     if (turTyps[j].checked === true) {
@@ -310,7 +309,7 @@ function reviewFill() {
             // Deals with ballstop quantities
             else if (spanIds[i] === "ballstops") {
                 var qtySelected;
-                var qtys = document.getElementsByName(`${spanIds[i]}-qty`);
+                var qtys = document.getElementsByName(`${spanIds[i]}-value`);
                 for (j = 0; j < qtys.length; j++) {
                     if (qtys[j].checked === true) {
                         qtySelected = qtys[j].value;
@@ -340,6 +339,7 @@ function reviewFill() {
         // Prints the selections in a user-friendly format to the webpage
         reviewSpans[i].innerHTML = dataIds[i];
     }
+    console.log(dataIds);
 }
 
 // Small function that capitalises the first letter of a string

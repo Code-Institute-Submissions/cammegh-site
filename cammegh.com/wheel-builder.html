@@ -185,10 +185,14 @@
                                 <form id="toprim-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="radioSelection(this.name,this.value)" id="toprim-gloss" type="radio" name="toprim-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="toprim-matt" type="radio" name="toprim-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="toprim-gloss" type="radio" name="toprim-value" value="gloss" checked>
+                                        <label for="toprim-gloss">Gloss</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="toprim-matt" type="radio" name="toprim-value" value="matt">
+                                        <label for="toprim-matt">Matt</label>
+                                        <span>&nbsp;||&nbsp;</span>
                                         <input onclick="activateSelections(this.id)" id="halo-check" type="checkbox" name="halo-check" value="halo">
-                                        <label for="halo-check" style="cursor: pointer;">Halo</label>
+                                        <label for="halo-check">Halo</label>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -241,8 +245,11 @@
                                 <form id="balltrack-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="radioSelection(this.name,this.value)" id="balltrack-gloss" type="radio" name="balltrack-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="balltrack-matt" type="radio" name="balltrack-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="balltrack-gloss" type="radio" name="balltrack-value" value="gloss" checked>
+                                        <label for="balltrack-gloss">Gloss</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="balltrack-matt" type="radio" name="balltrack-value" value="matt">
+                                        <label for="balltrack-matt">Matt</label>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -295,8 +302,11 @@
                                 <form id="cone-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="radioSelection(this.name,this.value)" id="cone-gloss" type="radio" name="cone-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="cone-matt" type="radio" name="cone-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="cone-gloss" type="radio" name="cone-value" value="gloss" checked>
+                                        <label for="cone-gloss">Gloss</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="cone-matt" type="radio" name="cone-value" value="matt">
+                                        <label for="cone-matt">Matt</label>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -357,8 +367,11 @@
                                 <form id="outerbowl-value" action="POST">
                                     <span>Finish:</span>
                                     <div>
-                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-gloss" type="radio" name="outerbowl-value" value="gloss" checked><span>Gloss</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-matt" type="radio" name="outerbowl-value" value="matt"><span>Matt</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-gloss" type="radio" name="outerbowl-value" value="gloss" checked>
+                                        <label for="outerbowl-gloss">Gloss</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-matt" type="radio" name="outerbowl-value" value="matt">
+                                        <label for="outerbowl-matt">Matt</label>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
@@ -395,9 +408,14 @@
                                 <form id="numberarc-pockets" action="POST">
                                     <span>Sequence:</span>
                                     <div>
-                                        <input onclick="pocketsSelection()" id="numberarc-37" type="radio" name="numberarc-pockets" value="37" checked><span>Single Zero</span>
-                                        <input onclick="pocketsSelection()" id="numberarc-38" type="radio" name="numberarc-pockets" value="38"><span>Double Zero</span>
-                                        <input onclick="pocketsSelection()" id="numberarc-39" type="radio" name="numberarc-pockets" value="39"><span>Triple Zero</span>
+                                        <input onclick="pocketsSelection()" id="numberarc-37" type="radio" name="numberarc-pockets" value="37" checked>
+                                        <label for="numberarc-37">Single Zero</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="pocketsSelection()" id="numberarc-38" type="radio" name="numberarc-pockets" value="38">
+                                        <label for="numberarc-38">Double Zero</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="pocketsSelection()" id="numberarc-39" type="radio" name="numberarc-pockets" value="39">
+                                        <label for="numberarc-39">Triple Zero</label>
                                     </div>
                                 </form>
                                 <div id="numberarc-pockets-37" class="numberarc-pockets arc-container active">
@@ -517,8 +535,11 @@
                                 <form id="separator-style" action="POST">
                                     <span>Separator Style:</span>
                                     <div>
-                                        <input onclick="pocketsSelection()" id="separator-dr" type="radio" name="separator-style" data-value="Double Radius" value="dr" checked><span>Double Radius</span>
-                                        <input onclick="pocketsSelection()" id="separator-sc" type="radio" name="separator-style" data-value="Scalloped" value="sc"><span>Scalloped</span>
+                                        <input onclick="pocketsSelection()" id="separator-dr" type="radio" name="separator-style" data-value="Double Radius" value="dr" checked>
+                                        <label for="separator-dr">Double Radius</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="pocketsSelection()" id="separator-sc" type="radio" name="separator-style" data-value="Scalloped" value="sc">
+                                        <label for="separator-sc">Scalloped</label>
                                     </div>
                                 </form>
                                 <div class="content-container-filler"></div>
@@ -564,9 +585,14 @@
                                 <form id="turret-value" action="POST">
                                     <span>Turret Type:</span>
                                     <div>
-                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-value" value="standard" checked><span>Standard</span>
-                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-value" value="french"><span>French</span>
-                                        <input onclick="turretSelection(this.name,this.value)" type="radio" name="turret-value" value="continental"><span>Continental</span>
+                                        <input onclick="turretSelection(this.name,this.value)" id="turret-standard" type="radio" name="turret-value" value="standard" checked>
+                                        <label for="turret-standard">Standard</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="turretSelection(this.name,this.value)" id="turret-french" type="radio" name="turret-value" value="french">
+                                        <label for="turret-french">French</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="turretSelection(this.name,this.value)" id="turret-continental" type="radio" name="turret-value" value="continental">
+                                        <label for="turret-continental">Continental</label>
                                     </div>
                                 </form>
                                 <div class="content-container-filler"></div>
@@ -620,10 +646,17 @@
                                 <form id="ballstops-value" action="POST">
                                     <span>Ball Stop Quantity:</span>
                                     <div style="display:inline-block">
-                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="8" checked><span>8</span>
-                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="12"><span>12</span>
-                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="14"><span>14</span>
-                                        <input onclick="radioSelection(this.name,this.value)" type="radio" name="ballstops-value" value="16"><span>16</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="ballstops-8" type="radio" name="ballstops-value" value="8" checked>
+                                        <label for="ballstops-8">8</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="ballstops-12" type="radio" name="ballstops-value" value="12">
+                                        <label for="ballstops-12">12</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="ballstops-14" type="radio" name="ballstops-value" value="14">
+                                        <label for="ballstops-14">14</label>
+                                        <span>&nbsp;|&nbsp;</span>
+                                        <input onclick="radioSelection(this.name,this.value)" id="ballstops-16" type="radio" name="ballstops-value" value="16">
+                                        <label for="ballstops-16">16</label>
                                     </div>
                                 </form>
                                 <div class="col-12 selection-list-container">
