@@ -455,6 +455,22 @@ hr {
     background-image: url('../images/col_ss2tt.jpg');
 }
 
+.bespoke {
+    background-image: url('../images/bespoke-dragon.png');
+}
+
+.veneers {
+    background-image: url('../images/veneer-finishes-stretch.png');
+}
+
+.hover-box {
+    background-color: rgba(0,0,0,0.7);
+}
+
+.hover-fix {
+    margin: 0 8px 8px;
+}
+
 .button-tile {
     cursor: pointer;
 }
@@ -494,7 +510,7 @@ hr {
 
 @media(min-width:600px) {
     .product-button-tile {
-        min-height: 140px;
+        min-height: 145px;
     }
 }
 
@@ -514,10 +530,6 @@ hr {
     .product-button-tile {
         min-height: 165px;
     }
-}
-
-.product-button-tile:hover .descriptor.active {
-    background-color: rgba(0, 0, 0, 0.7);
 }
 
 .product-button-tile .descriptor.active p {
@@ -650,7 +662,6 @@ hr {
 }
 
 .descriptor {
-    padding-left: 5px;
     padding-top: 5px;
 }
 
@@ -887,7 +898,7 @@ hr {
 
 #links {
     overflow-x: hidden;
-    height: 70px;
+    height: 80px;
     display: block;
 }
 

@@ -1,5 +1,35 @@
 # Cammegh Website Rebuild
 
+- [Description](#description)
+- [User Experience](#ux)
+    - [Scope](#scope)
+        - [Necessary Pages](#necessary-pages)
+        - [Necessary Functionality](#necessary-functionality)
+    - [Structure](#structure)
+- [Features](#features)
+    - [Features Implemented](#features-implemented)
+        - [Home Page](#home-page)
+        - [Products Page](#products-page)
+        - [Wheel Builder Page](#wheel-builder-page)
+        - [Contact Info Page](#contact-info-page)
+        - [Terms and Conditions Page](#ts-and-cs-page)
+        - [Gallery Page](#gallery-page)
+        - [Other Functionality](#other-funcionality)
+    - [Features Left to Implement](#features-left-to-implement)
+        - [Products - Roulette Wheels Page](#products---roulette-wheels-page:)
+            - [Wheel Builder Page](#wheel-builder-page:)
+- [Technologies Used](#techologies-used)
+- [Testing](#testing)
+    - [Known Bugs](#known-bugs)
+- [Deployment](#deployment)
+- [Credits](#credits)
+    - [Content](#content)
+    - [Media](#media)
+    - [Acknowledgements](#acknowledgements)
+
+
+## Description
+
 This is my rebuild of the [Cammegh](http://www.cammegh.com/index.php) website using HTML, CSS, JavaScript and jQuery, with select parts of Bootstrap used for styling purposes. I felt the existing webpages needed a redesign as they are very unfriendly to users, especially those on mobile devices, much of the information is outdated and quite a few sections of JavaScript do nothing.
 
 My aim is to bring the website forward since the last time it was updated a decade ago and give it a fresh new look, with user friendly links, sizing and content. I believe I can manage this through rigorous testing and a simple design that still contains all of the necessary information a user, whether commercial or individual, would need. Given the outdated nature of the existing site, I believed that rebuilding from scratch was the best way to start.
@@ -122,7 +152,6 @@ Includes links to all the following pages, and a brief description about each:
 #### Wheel Builder page:
 - *Option of "standard" layouts for selection?*
 - *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork). NOTE: this requires a paid subscription to email.js*
-
 
 
 ## Technologies Used
