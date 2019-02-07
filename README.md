@@ -53,6 +53,7 @@ The majority of users of the Cammegh site, using their existing customer base as
 #### Necessary Functionality
 
 Most of the functionality that was originally decided on is focused on the wheel-builder page. JavaScript is necessary to be able to change image src values and unique selections. The bones of this funcionality was specified as follows:
+
 - Selections highlight when clicked on
 - Radio buttons for finishes and/or quantities as necessary
 - Selections and buttons change the render of the wheel that is displayed
@@ -60,6 +61,7 @@ Most of the functionality that was originally decided on is focused on the wheel
 - Ability to automatically send an email with the selections made
 
 I realised early on that more functionality was going to be required, and is outlined below:
+
 - JavaScript possibly required to deal with "sticky hover" from touch-screen devices when deselecting options on the wheel builder page
 - Scaling text and boxes so site is usable on multiple resolutions
 - Google Maps API and/or link to Google Maps for company address, as picture on existing website does not scale
@@ -102,6 +104,7 @@ Within Products (in order of importance):
 
 #### Products page:
 Includes links to all the following pages, and a brief description about each:
+
 - Wheels page
     - Includes all available wheels produced with pictures
     - Includes expanding boxes for all wheels produced, highlighting their features
