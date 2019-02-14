@@ -339,7 +339,6 @@ function reviewFill() {
         // Prints the selections in a user-friendly format to the webpage
         reviewSpans[i].innerHTML = dataIds[i];
     }
-    console.log(dataIds);
 }
 
 // Small function that capitalises the first letter of a string

@@ -214,6 +214,7 @@ Some of its time was spent being uploaded to [BitBucket](https://bitbucket.org/)
 ### Acknowledgements
 
 I received inspiration for this project from the following sources:
+
 - [TCS John Huxley](https://www.tcsjohnhuxley.com/)
     - Their Roulette Wheel Configurator was what prompted Cammegh to start a re-work of their entire website. The aforementioned page was what I based my design and layout off of (with several changes to prevent things like a single-zero number arc set being put with a double zero separator ring).
 - [Martin Williams Casino Equipment](https://www.mwce.co.uk/)

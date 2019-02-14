@@ -407,59 +407,59 @@ hr {
     padding: 5px 10px 0 0;
 }
 
-.classic {
+.classic-section {
     background-image: url('../images/col_classic.jpg');
 }
 
-.connoisseur {
+.connoisseur-section {
     background-image: url('../images/col_conn.jpg');
 }
 
-.continental {
+.continental-section {
     background-image: url('../images/col_cont.jpg');
 }
 
-.monaco {
+.monaco-section {
     background-image: url('../images/col_monaco.jpg');
 }
 
-.m360 {
+.m360-section {
     background-image: url('../images/col_merc.jpg');
 }
 
-.mini360 {
+.mini360-section {
     background-image: url('../images/col_mini.jpg');
 }
 
-.rrs {
+.rrs-section {
     background-image: url('../images/col_rrs.png');
 }
 
-.halo {
+.halo-section {
     background-image: url('../images/col_halo.jpg');
 }
 
-.aur360 {
+.aur360-section {
     background-image: url('../images/col_aurora_2.jpg');
 }
 
-.crystal {
+.crystal-section {
     background-image: url('../images/col_crystal.jpg');
 }
 
-.ss2 {
+.ss2-section {
     background-image: url('../images/col_ss2.jpg');
 }
 
-.ss2tt {
+.ss2tt-section {
     background-image: url('../images/col_ss2tt.jpg');
 }
 
-.bespoke {
+.bespoke-section {
     background-image: url('../images/bespoke-dragon-hr.png');
 }
 
-.veneers {
+.veneers-section {
     background-image: url('../images/veneer-finishes-stretch.png');
 }
 
