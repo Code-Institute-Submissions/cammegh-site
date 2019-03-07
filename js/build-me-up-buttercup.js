@@ -73,6 +73,9 @@ function activateSelections(id) {
     // If the selection is not the halo option, then check if the selection is already active. If so, deactivate it. (Toggle selection function)
     else if (selection.classList.contains("active")) {
         selection.classList.remove("active");
+        if (base === "psu"){
+            picFade(pic, imageBlank);
+        }
     }
 
     // Otherwise, get all possible selections (using the class list), deactivate them all and activate the one that was clicked on

@@ -48,7 +48,7 @@ The majority of users of the Cammegh site, using their existing customer base as
     - Individual pages for each product category
 - A page where you can build your own wheel from a selection of options
 - Contact page
-- Clients page
+- Clients page/Gallery
 
 #### Necessary Functionality
 
@@ -91,7 +91,7 @@ Within Products (in order of importance):
 
 **Contact Info** - standard affair of phone numbers and emails for both Sales and Support staff, and Google Maps image/API to show where the company is located for those who want to visit. *I later decided to add opening hours to this page.*
 
-**Clients** - this is the one page that was not defined. Most competitors sites have something similar ([TCS John Huxley](https://www.tcsjohnhuxley.com/) have a scrollbar with links to various casinos they provide for, [Martin Williams](https://www.mwce.co.uk/clients/) have a page that lists countries and customers together), whilst the original Cammegh website has a [Testimonials page](http://www.cammegh.com/testimonial.php)). As such this page was not defined almost until the completion of the rest of the website.
+**Gallery** - this is the one page that was not defined. Most competitors sites have something similar ([TCS John Huxley](https://www.tcsjohnhuxley.com/) have a scrollbar with links to various casinos they provide for, [Martin Williams](https://www.mwce.co.uk/clients/) have a page that lists countries and customers together), whilst the original Cammegh website has a [Testimonials page](http://www.cammegh.com/testimonial.php)). As such this page was not defined at all. I felt it made more sense to have a Gallery page that was an upgrade over the existing one on the Cammegh website than a whole page dedicated to who Cammegh sell to.
 
 
 ## Features
@@ -142,7 +142,7 @@ Includes links to all the following pages, and a brief description about each:
 
 #### Gallery page:
 - Downloaded Sebastian Tschan (aka blueimp)'s [gallery script](https://github.com/blueimp/Gallery) and populated it with images for the gallery
-- Minor tweaks made to downloaded blueimp-gallery.js for desired functionality (clicking thumbnails opens in exissting carousel as opposed to modal-like widget, clicking thumbnails no longer sets overflow = hidden on the body tag).
+- Minor tweaks made to downloaded blueimp-gallery.js for desired functionality (clicking thumbnails opens in existing carousel as opposed to modal-like widget, clicking thumbnails no longer sets overflow = hidden on the body tag).
 
 #### Other Functionality
 - I used an adapted version of the 31/01/2017 jQuery solution to [loading high-resolution images](https://stackoverflow.com/questions/27934548/load-a-low-res-background-image-first-then-a-high-res-one) to allow the page to quickly load a low-res image (so the layout of the page loads fast) and when the high-res image has finished loading in the background it swaps the src of the low-res image to the high-res image.

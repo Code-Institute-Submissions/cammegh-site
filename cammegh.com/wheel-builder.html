@@ -136,8 +136,7 @@
                         <div class="col-12">
                             <p>Welcome to the Wheel Builder. Cammegh prides itself on the level of customisability available to its clients, and with a wealth of options, this tool will allow you to create your very own Cammegh Roulette Wheel.</p>
                             <hr>
-                            <p>Once you have a design you are happy with, please complete the form below and a <span style="display: none">full HD render of your wheel along with a</span> list of your selected options will be sent to you via email. A copy of this will also be sent to our
-                                Sales team for a formal quote by default unless specified in the tickbox in the form.</p>
+                            <p>Once you have a design you are happy with, please complete the form below and a <span style="display: none">full HD render of your wheel along with a</span> list of your selected options will be sent to you via email. A copy of this will also be sent to our Sales team for a formal quote by default unless specified in the tickbox in the form.</p>
                         </div>
                         <div class="content-container-filler"></div>
                     </div>
@@ -221,6 +220,14 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
+                                        <div onclick="activateSelections(this.id)" data-id="Sapele" id="toprim-sapele" class="col-12 toprim selection-list-option">
+                                            <span>Sapele</span>
+                                        </div>
+                                        <div class="content-container-filler"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 selection-list-container">
+                                    <div class="selection-list-option-container">
                                         <div onclick="activateSelections(this.id)" data-id="Indian Rosewood" id="toprim-rosewood-indian" class="col-12 toprim selection-list-option">
                                             <span>Indian Rosewood</span>
                                         </div>
@@ -278,6 +285,14 @@
                                 </div>
                                 <div class="col-12 selection-list-container">
                                     <div class="selection-list-option-container">
+                                        <div onclick="activateSelections(this.id)" data-id="Sapele" id="balltrack-sapele" class="col-12 balltrack selection-list-option">
+                                            <span>Sapele</span>
+                                        </div>
+                                        <div class="content-container-filler"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 selection-list-container">
+                                    <div class="selection-list-option-container">
                                         <div onclick="activateSelections(this.id)" data-id="Indian Rosewood" id="balltrack-rosewood-indian" class="col-12 balltrack selection-list-option">
                                             <span>Indian Rosewood</span>
                                         </div>
@@ -329,6 +344,14 @@
                                     <div class="selection-list-option-container">
                                         <div onclick="activateSelections(this.id)" data-id="Maple" id="cone-maple" class="col-12 cone selection-list-option">
                                             <span>Maple</span>
+                                        </div>
+                                        <div class="content-container-filler"></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 selection-list-container">
+                                    <div class="selection-list-option-container">
+                                        <div onclick="activateSelections(this.id)" data-id="Sapele" id="cone-sapele" class="col-12 cone selection-list-option">
+                                            <span>Sapele</span>
                                         </div>
                                         <div class="content-container-filler"></div>
                                     </div>
@@ -649,12 +672,12 @@
                                         <input onclick="radioSelection(this.name,this.value)" id="ballstops-8" type="radio" name="ballstops-value" value="8" checked>
                                         <label for="ballstops-8">8</label>
                                         <span>&nbsp;|&nbsp;</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="ballstops-12" type="radio" name="ballstops-value" value="12">
-                                        <label for="ballstops-12">12</label>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="ballstops-14" type="radio" name="ballstops-value" value="14">
-                                        <label for="ballstops-14">14</label>
-                                        <span>&nbsp;|&nbsp;</span>
+                                        <!--<input onclick="radioSelection(this.name,this.value)" id="ballstops-12" type="radio" name="ballstops-value" value="12">-->
+                                        <!--<label for="ballstops-12">12</label>-->
+                                        <!--<span>&nbsp;|&nbsp;</span>-->
+                                        <!--<input onclick="radioSelection(this.name,this.value)" id="ballstops-14" type="radio" name="ballstops-value" value="14">-->
+                                        <!--<label for="ballstops-14">14</label>-->
+                                        <!--<span>&nbsp;|&nbsp;</span>-->
                                         <input onclick="radioSelection(this.name,this.value)" id="ballstops-16" type="radio" name="ballstops-value" value="16">
                                         <label for="ballstops-16">16</label>
                                     </div>
@@ -798,7 +821,7 @@
                             </div>
                         </div>
                         <div class="col-12 wheel-builder-render">
-                            <img src="../images/wheel-builder/blank-background.png" id="background" alt="Wheel Builder Background">
+                            <img src="../images/wheel-builder/wireframe.png" id="background" alt="Wheel Builder Background">
                             <img src="../images/wheel-builder/blank-background.png" id="cone" alt="Cone Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="numberarc" alt="Number Arc Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="separator" alt="Separator Layer" class="wheel-builder-preview">
