@@ -747,7 +747,8 @@ hr {
 
 @media(min-width:992px) {
     .selection-tab {
-        width: 9.79393%;
+        /*width: 9.79393%; <-- Use this width if the outerbowl tab is not hidden on wheel-builder.html*/
+        width: 11.04392%;
         font-size: 11px;
         text-align: center;
         margin-top: 6px;

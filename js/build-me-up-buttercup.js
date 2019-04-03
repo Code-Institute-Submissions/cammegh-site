@@ -261,12 +261,14 @@ function reviewFill() {
             spanIds.push(spans[i].dataset.id);
         }
     }
+    console.log(spanIds);
     var dataIds = [];
     for (i = 0; i < spanIds.length; i++) {
         var selection = document.getElementsByClassName(`${spanIds[i]} selection-list-option active`)[0];
         if (selection) {
-            // Deals with lacquered sections that have matt or glass finish
-            if (i < 5) {
+            // Deals with lacquered sections that have matt or glass finish. If the halo band and outer-bowl options are not hidden in the review section of wheel-builder.html,
+            // change the value 3 on the line below to 5.
+            if (i < 3) {
                 var finishSelected;
                 var finishes = document.getElementsByName(`${spanIds[i]}-value`);
                 for (j = 0; j < finishes.length; j++) {

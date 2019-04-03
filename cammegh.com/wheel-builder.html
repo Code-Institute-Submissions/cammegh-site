@@ -153,9 +153,9 @@
                             <div onclick="activateTabs(this.id)" id="cone-tab-large" class="col-md-1 selection-tab">
                                 <span>Cone</span>
                             </div>
-                            <div onclick="activateTabs(this.id)" id="outerbowl-tab-large" class="col-md-1 selection-tab">
-                                <span>Outer Bowl</span>
-                            </div>
+                            <!--<div onclick="activateTabs(this.id)" id="outerbowl-tab-large" class="col-md-1 selection-tab">-->
+                            <!--    <span>Outer Bowl</span>-->
+                            <!--</div>-->
                             <div onclick="activateTabs(this.id)" id="numberarc-tab-large" class="col-md-1 selection-tab">
                                 <span>Number Arcs</span>
                             </div>
@@ -181,7 +181,7 @@
                             </div>
                             <div id="toprim-selection" class="col-12 selection-list active">
                                 <div class="content-container-filler"></div>
-                                <form id="toprim-value" action="POST">
+                                <form id="toprim-value" action="POST" style="display:none">
                                     <span>Finish:</span>
                                     <div>
                                         <input onclick="radioSelection(this.name,this.value)" id="toprim-gloss" type="radio" name="toprim-value" value="gloss" checked>
@@ -249,7 +249,7 @@
                             </div>
                             <div id="balltrack-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
-                                <form id="balltrack-value" action="POST">
+                                <form id="balltrack-value" action="POST" style="display:none">
                                     <span>Finish:</span>
                                     <div>
                                         <input onclick="radioSelection(this.name,this.value)" id="balltrack-gloss" type="radio" name="balltrack-value" value="gloss" checked>
@@ -314,7 +314,7 @@
                             </div>
                             <div id="cone-selection" class="col-12 selection-list">
                                 <div class="content-container-filler"></div>
-                                <form id="cone-value" action="POST">
+                                <form id="cone-value" action="POST" style="display:none">
                                     <span>Finish:</span>
                                     <div>
                                         <input onclick="radioSelection(this.name,this.value)" id="cone-gloss" type="radio" name="cone-value" value="gloss" checked>
@@ -372,57 +372,57 @@
                                         <div class="content-container-filler"></div>
                                     </div>
                                 </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Aurora" id="cone-aurora" class="col-12 cone selection-list-option">
-                                            <span>Aurora</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Aurora" id="cone-aurora" class="col-12 cone selection-list-option">-->
+                                <!--            <span>Aurora</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
                                 <div class="content-container-filler"></div>
                             </div>
-                            <div onclick="activateTabs(this.id)" id="outerbowl-tab-small" class="col-12 hidden-md selection-tab">
-                                <span>Outer Bowl</span>
-                            </div>
-                            <div id="outerbowl-selection" class="col-12 selection-list">
-                                <div class="content-container-filler"></div>
-                                <form id="outerbowl-value" action="POST">
-                                    <span>Finish:</span>
-                                    <div>
-                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-gloss" type="radio" name="outerbowl-value" value="gloss" checked>
-                                        <label for="outerbowl-gloss">Gloss</label>
-                                        <span>&nbsp;|&nbsp;</span>
-                                        <input onclick="radioSelection(this.name,this.value)" id="outerbowl-matt" type="radio" name="outerbowl-value" value="matt">
-                                        <label for="outerbowl-matt">Matt</label>
-                                    </div>
-                                </form>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Cammegh Black-Brown" id="outerbowl-blackbrown" style="background-color:#141111;" class="col-12 outerbowl selection-list-option">
-                                            <span>Cammegh Black-Brown</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Piano Black" id="outerbowl-pb" style="background-color:black;" class="col-12 outerbowl selection-list-option">
-                                            <span>Piano Black</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Cream" id="outerbowl-cream" style="background-color:#fddfbe; color:black;" title="RAL140-4" class="col-12 outerbowl selection-list-option">
-                                            <span>Cream</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
-                                <div class="content-container-filler"></div>
-                            </div>
+                            <!--<div onclick="activateTabs(this.id)" id="outerbowl-tab-small" class="col-12 hidden-md selection-tab">-->
+                            <!--    <span>Outer Bowl</span>-->
+                            <!--</div>-->
+                            <!--<div id="outerbowl-selection" class="col-12 selection-list">-->
+                            <!--    <div class="content-container-filler"></div>-->
+                            <!--    <form id="outerbowl-value" action="POST">-->
+                            <!--        <span>Finish:</span>-->
+                            <!--        <div>-->
+                            <!--            <input onclick="radioSelection(this.name,this.value)" id="outerbowl-gloss" type="radio" name="outerbowl-value" value="gloss" checked>-->
+                            <!--            <label for="outerbowl-gloss">Gloss</label>-->
+                            <!--            <span>&nbsp;|&nbsp;</span>-->
+                            <!--            <input onclick="radioSelection(this.name,this.value)" id="outerbowl-matt" type="radio" name="outerbowl-value" value="matt">-->
+                            <!--            <label for="outerbowl-matt">Matt</label>-->
+                            <!--        </div>-->
+                            <!--    </form>-->
+                            <!--    <div class="col-12 selection-list-container">-->
+                            <!--        <div class="selection-list-option-container">-->
+                            <!--            <div onclick="activateSelections(this.id)" data-id="Cammegh Black-Brown" id="outerbowl-blackbrown" style="background-color:#141111;" class="col-12 outerbowl selection-list-option">-->
+                            <!--                <span>Cammegh Black-Brown</span>-->
+                            <!--            </div>-->
+                            <!--            <div class="content-container-filler"></div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--    <div class="col-12 selection-list-container">-->
+                            <!--        <div class="selection-list-option-container">-->
+                            <!--            <div onclick="activateSelections(this.id)" data-id="Piano Black" id="outerbowl-pb" style="background-color:black;" class="col-12 outerbowl selection-list-option">-->
+                            <!--                <span>Piano Black</span>-->
+                            <!--            </div>-->
+                            <!--            <div class="content-container-filler"></div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--    <div class="col-12 selection-list-container">-->
+                            <!--        <div class="selection-list-option-container">-->
+                            <!--            <div onclick="activateSelections(this.id)" data-id="Cream" id="outerbowl-cream" style="background-color:#fddfbe; color:black;" title="RAL140-4" class="col-12 outerbowl selection-list-option">-->
+                            <!--                <span>Cream</span>-->
+                            <!--            </div>-->
+                            <!--            <div class="content-container-filler"></div>-->
+                            <!--        </div>-->
+                            <!--    </div>-->
+                            <!--    <div class="content-container-filler"></div>-->
+                            <!--</div>-->
                             <div onclick="activateTabs(this.id)" id="numberarc-tab-small" class="col-12 hidden-md selection-tab">
                                 <span>Number Arcs</span>
                             </div>
@@ -458,22 +458,22 @@
                                             <div class="content-container-filler"></div>
                                         </div>
                                     </div>
-                                    <div class="col-12 selection-list-container-full">
-                                        <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Myriad Pro Font, White Numbers (M8)" id="numberarc-37-m8" class="col-12 numberarc selection-list-option">
-                                                <span>Standard Sequence, Myriad Pro Font, White Numbers</span>
-                                            </div>
-                                            <div class="content-container-filler"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 selection-list-container-full">
-                                        <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Smart Sans Font, Off-white Numbers (M23)" id="numberarc-37-m23" class="col-12 numberarc selection-list-option">
-                                                <span>Standard Sequence, Smart Sans Font, Off-White Numbers</span>
-                                            </div>
-                                            <div class="content-container-filler"></div>
-                                        </div>
-                                    </div>
+                                    <!--<div class="col-12 selection-list-container-full">-->
+                                    <!--    <div class="selection-list-option-container">-->
+                                    <!--        <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Myriad Pro Font, White Numbers (M8)" id="numberarc-37-m8" class="col-12 numberarc selection-list-option">-->
+                                    <!--            <span>Standard Sequence, Myriad Pro Font, White Numbers</span>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="content-container-filler"></div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-12 selection-list-container-full">-->
+                                    <!--    <div class="selection-list-option-container">-->
+                                    <!--        <div onclick="activateSelections(this.id)" data-id="Standard Single Zero, Smart Sans Font, Off-white Numbers (M23)" id="numberarc-37-m23" class="col-12 numberarc selection-list-option">-->
+                                    <!--            <span>Standard Sequence, Smart Sans Font, Off-White Numbers</span>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="content-container-filler"></div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
                                 </div>
                                 <div id="numberarc-pockets-38" class="numberarc-pockets arc-container">
                                     <div class="col-12 selection-list-container-full">
@@ -492,22 +492,22 @@
                                             <div class="content-container-filler"></div>
                                         </div>
                                     </div>
-                                    <div class="col-12 selection-list-container-full">
-                                        <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" data-id="Double Zero, European Variant 00-0 (M6)" id="numberarc-38b-m6" class="col-12 numberarc selection-list-option">
-                                                <span>European Variant (26 - 00 - 0 - 32), Roman Font, Primrose Numbers</span>
-                                            </div>
-                                            <div class="content-container-filler"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 selection-list-container-full">
-                                        <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" data-id="Double Zero, European Variant 0-00 (M7)" id="numberarc-38b-m7" class="col-12 numberarc selection-list-option">
-                                                <span>European Variant (26 - 0 - 00 - 32), Roman Font, Primrose Numbers</span>
-                                            </div>
-                                            <div class="content-container-filler"></div>
-                                        </div>
-                                    </div>
+                                    <!--<div class="col-12 selection-list-container-full">-->
+                                    <!--    <div class="selection-list-option-container">-->
+                                    <!--        <div onclick="activateSelections(this.id)" data-id="Double Zero, European Variant 00-0 (M6)" id="numberarc-38b-m6" class="col-12 numberarc selection-list-option">-->
+                                    <!--            <span>European Variant (26 - 00 - 0 - 32), Roman Font, Primrose Numbers</span>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="content-container-filler"></div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-12 selection-list-container-full">-->
+                                    <!--    <div class="selection-list-option-container">-->
+                                    <!--        <div onclick="activateSelections(this.id)" data-id="Double Zero, European Variant 0-00 (M7)" id="numberarc-38b-m7" class="col-12 numberarc selection-list-option">-->
+                                    <!--            <span>European Variant (26 - 0 - 00 - 32), Roman Font, Primrose Numbers</span>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="content-container-filler"></div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
                                 </div>
                                 <div id="numberarc-pockets-39" class="numberarc-pockets arc-container">
                                     <div class="selection-list-option-container">
@@ -523,22 +523,22 @@
                                             <div class="content-container-filler"></div>
                                         </div>
                                     </div>
-                                    <div class="col-12 selection-list-container">
-                                        <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m16" class="col-12 numberarc selection-list-option">
-                                                <span>MGM New York NY</span>
-                                            </div>
-                                            <div class="content-container-filler"></div>
-                                        </div>
-                                    </div>
-                                    <div class="col-12 selection-list-container">
-                                        <div class="selection-list-option-container">
-                                            <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m21" class="col-12 numberarc selection-list-option">
-                                                <span>Excalibur Las Vegas</span>
-                                            </div>
-                                            <div class="content-container-filler"></div>
-                                        </div>
-                                    </div>
+                                    <!--<div class="col-12 selection-list-container">-->
+                                    <!--    <div class="selection-list-option-container">-->
+                                    <!--        <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m16" class="col-12 numberarc selection-list-option">-->
+                                    <!--            <span>MGM New York NY</span>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="content-container-filler"></div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
+                                    <!--<div class="col-12 selection-list-container">-->
+                                    <!--    <div class="selection-list-option-container">-->
+                                    <!--        <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39ss-m21" class="col-12 numberarc selection-list-option">-->
+                                    <!--            <span>Excalibur Las Vegas</span>-->
+                                    <!--        </div>-->
+                                    <!--        <div class="content-container-filler"></div>-->
+                                    <!--    </div>-->
+                                    <!--</div>-->
                                     <div class="col-12 selection-list-container">
                                         <div class="selection-list-option-container">
                                             <div onclick="activateSelections(this.id)" data-id="Triple Zero, please specify sequence below" id="numberarc-39sd-m29" class="col-12 numberarc selection-list-option">
@@ -582,22 +582,22 @@
                                         <div class="content-container-filler"></div>
                                     </div>
                                 </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Clear Anodised" id="separator-anodised-clear" class="col-12 separator selection-list-option">
-                                            <span>Clear Anodised Aluminium</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Gold Anodised" id="separator-anodised-gold" class="col-12 separator selection-list-option">
-                                            <span>Gold Anodised Aluminium</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Clear Anodised" id="separator-anodised-clear" class="col-12 separator selection-list-option">-->
+                                <!--            <span>Clear Anodised Aluminium</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Gold Anodised" id="separator-anodised-gold" class="col-12 separator selection-list-option">-->
+                                <!--            <span>Gold Anodised Aluminium</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
                                 <div class="content-container-filler"></div>
                             </div>
                             <div onclick="activateTabs(this.id)" id="turret-tab-small" class="col-12 hidden-md selection-tab">
@@ -635,22 +635,22 @@
                                         <div class="content-container-filler"></div>
                                     </div>
                                 </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Clear Anodised" id="turret-anodised-clear" class="col-12 standard french turret selection-list-option">
-                                            <span>Clear Anodised</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Gold Anodised" id="turret-anodised-gold" class="col-12 standard french turret selection-list-option">
-                                            <span>Gold Anodised</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Clear Anodised" id="turret-anodised-clear" class="col-12 standard french turret selection-list-option">-->
+                                <!--            <span>Clear Anodised</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Gold Anodised" id="turret-anodised-gold" class="col-12 standard french turret selection-list-option">-->
+                                <!--            <span>Gold Anodised</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
                                 <div class="col-12 selection-list-container arc-container">
                                     <div class="selection-list-option-container">
                                         <div onclick="activateSelections(this.id)" data-id="Polished Stainless Steel" id="turret-stainless-steel" class="col-12 continental turret selection-list-option">
@@ -698,22 +698,22 @@
                                         <div class="content-container-filler"></div>
                                     </div>
                                 </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Matt Stainless" id="ballstops-matt" class="col-12 ballstops selection-list-option">
-                                            <span>Matt Stainless Steel</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
-                                <div class="col-12 selection-list-container">
-                                    <div class="selection-list-option-container">
-                                        <div onclick="activateSelections(this.id)" data-id="Matt Gold" id="ballstops-matt-gold" class="col-12 ballstops selection-list-option">
-                                            <span>Matt Gold Plated</span>
-                                        </div>
-                                        <div class="content-container-filler"></div>
-                                    </div>
-                                </div>
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Matt Stainless" id="ballstops-matt" class="col-12 ballstops selection-list-option">-->
+                                <!--            <span>Matt Stainless Steel</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
+                                <!--<div class="col-12 selection-list-container">-->
+                                <!--    <div class="selection-list-option-container">-->
+                                <!--        <div onclick="activateSelections(this.id)" data-id="Matt Gold" id="ballstops-matt-gold" class="col-12 ballstops selection-list-option">-->
+                                <!--            <span>Matt Gold Plated</span>-->
+                                <!--        </div>-->
+                                <!--        <div class="content-container-filler"></div>-->
+                                <!--    </div>-->
+                                <!--</div>-->
                             </div>
                             <div onclick="activateTabs(this.id)" id="psu-tab-small" class="col-12 hidden-md selection-tab">
                                 <span>Power Cord</span>
@@ -771,14 +771,14 @@
                                         <div class="col-12 selection-list-total">
                                             <p>Top Rim:</p>
                                             <p><span id="toprim_selection" data-id="toprim"></span></p><br>
-                                            <p>Halo Band:</p>
-                                            <p><span id="halo_selection" data-id="halo"></span></p><br>
+                                            <!--<p>Halo Band:</p>-->
+                                            <!--<p><span id="halo_selection" data-id="halo"></span></p><br>-->
                                             <p>Balltrack:</p>
                                             <p><span id="balltrack_selection" data-id="balltrack"></span></p><br>
                                             <p>Cone:</p>
                                             <p><span id="cone_selection" data-id="cone"></span></p><br>
-                                            <p>Outer Bowl:</p>
-                                            <p><span id="outerbowl_selection" data-id="outerbowl"></span></p><br>
+                                            <!--<p>Outer Bowl:</p>-->
+                                            <!--<p><span id="outerbowl_selection" data-id="outerbowl"></span></p><br>-->
                                             <p>Number Arcs:</p>
                                             <p><span id="numberarc_selection" data-id="numberarc"></span></p><br>
                                             <p>Separator:</p>
@@ -827,9 +827,9 @@
                             <img src="../images/wheel-builder/blank-background.png" id="separator" alt="Separator Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="balltrack" alt="Balltrack Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="ballstops" alt="Ball Stops Layer" class="wheel-builder-preview">
-                            <img src="../images/wheel-builder/blank-background.png" id="outerbowl" alt="Outer Bowl Layer" class="wheel-builder-preview">
+                            <!--<img src="../images/wheel-builder/blank-background.png" id="outerbowl" alt="Outer Bowl Layer" class="wheel-builder-preview">-->
                             <img src="../images/wheel-builder/blank-background.png" id="toprim" alt="Top Rim Layer" class="wheel-builder-preview">
-                            <img src="../images/wheel-builder/blank-background.png" id="halo" alt="Halo Layer" class="wheel-builder-preview">
+                            <!--<img src="../images/wheel-builder/blank-background.png" id="halo" alt="Halo Layer" class="wheel-builder-preview">-->
                             <img src="../images/wheel-builder/blank-background.png" id="turret" alt="Turret Layer" class="wheel-builder-preview">
                             <img src="../images/wheel-builder/blank-background.png" id="psu" alt="Power Supply Layer" class="wheel-builder-preview">
                         </div>
