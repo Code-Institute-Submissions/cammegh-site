@@ -55,12 +55,12 @@ The majority of users of the Cammegh site, using their existing customer base as
 Most of the functionality that was originally decided on is focused on the wheel-builder page. JavaScript is necessary to be able to change image src values and unique selections. The bones of this funcionality was specified as follows:
 
 - Selections highlight when clicked on
-- Radio buttons for finishes and/or quantities as necessary
+- Radio buttons for styles and/or quantities as necessary
 - Selections and buttons change the render of the wheel that is displayed
 - Review section that fills out based on the previous selections (very important)
 - Ability to automatically send an email with the selections made
 
-I realised early on that more functionality was going to be required, and is outlined below:
+I realised early on that more functionality was going to be required, which is outlined below:
 
 - JavaScript possibly required to deal with "sticky hover" from touch-screen devices when deselecting options on the wheel builder page
 - Scaling text and boxes so site is usable on multiple resolutions
@@ -149,9 +149,6 @@ Includes links to all the following pages, and a brief description about each:
 
 ### Features Left to Implement
 
-#### Products - Roulette Wheels page:
-- *Different veneers/finishes available?*
-
 #### Wheel Builder page:
 - *Option of "standard" layouts for selection?*
 - *File upload option for custom number arcs w/ multiple file capacity (for sequence + artwork). NOTE: this requires a paid subscription to email.js*
@@ -188,7 +185,7 @@ Includes links to all the following pages, and a brief description about each:
 ## Deployment
 
 This website was uploaded to GitHub and (will be) deployed to [GitHub Pages]().
-Some of its time was spent being uploaded to [BitBucket](https://bitbucket.org/) instead due to the sensitive nature of the content and images.
+Some of its time was spent being uploaded to [BitBucket](https://bitbucket.org/) instead due to the sensitive nature of the content, images and functionality.
 
 
 ## Credits
@@ -218,7 +215,7 @@ I received inspiration for this project from the following sources:
 - [TCS John Huxley](https://www.tcsjohnhuxley.com/)
     - Their Roulette Wheel Configurator was what prompted Cammegh to start a re-work of their entire website. The aforementioned page was what I based my design and layout off of (with several changes to prevent things like a single-zero number arc set being put with a double zero separator ring).
 - [Martin Williams Casino Equipment](https://www.mwce.co.uk/)
-    - I admired the simple and concise design of this site and the decision to have the width of the page be limited on wider resolutions was influenced heavily by this. Their site also did not have the same brash colour scheme as TCS Huxley, which forced me to thing about the colour palette I was going to use.
+    - I admired the simple and concise design of this site and the decision to have the width of the page be limited on wider resolutions was influenced heavily by this. Their site also did not have the same brash colour scheme as TCS Huxley, which forced me to think about the colour palette I was going to use.
 
 This project came about mostly because of two unrelated incidents that just happened to coincide rather nicely with each other. I wanted a way to practice my coding away from the course I am studying and Cammegh had tried unsuccessfully to get a new website off the ground back in 2017. After that effort floundered, I picked up the pieces and did some digging around the company in 2018 to work out what was likely to be needed. Starting out as a pet-project to develop my skills, it eventually became in-depth and functional enough to be my second stream project for the Code Institute course. This leads on to some acknowledgements of those that helped me, both when this project was in its infancy and when it became the official stream project:
 
