@@ -176,6 +176,12 @@ Includes links to all the following pages, and a brief description about each:
 - All pages viewed on Chrome, Edge, Safari and Firefox to check layout consistency.
 - All pages viewed at mobile and tablet resolutions to check responsiveness.
 - Links tested on all mentioned browsers to ensure no stray links or bugs.
+- All pages audited using Google Chrome Lighthouse in both mobile and desktop to identify performance and accessability issues, best practices and search engine optimisations.
+    - Performance issues: none
+    - Accessability issues: none
+    - Best Practices issues:
+        - Desktop + mobile: wheel-builder.html medium security warning with bootstrap v3.3.7
+    - SEO issues: none
 
 ### Known Bugs
 - Changing the filter on the Gallery page causes the titles for the pictures to not display in the carousel
