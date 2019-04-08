@@ -73,7 +73,7 @@ function activateSelections(id) {
     // If the selection is not the halo option, then check if the selection is already active. If so, deactivate it. (Toggle selection function)
     else if (selection.classList.contains("active")) {
         selection.classList.remove("active");
-        if (base === "psu"){
+        if (base === "psu") {
             picFade(pic, imageBlank);
         }
     }
@@ -222,7 +222,7 @@ function turretSelection(name, value) {
     // If there is a selected turret, and that turret has as a class the style that is selected from the radio buttons, then do the following:
     // Get the image element for the turret layer and the id of the selected turret, then use picFade() to load that turret image
     if (selection && selection.hasClass(value)) {
-        radioSelection(name,checkedVal);
+        radioSelection(name, checkedVal);
     }
 
     // For each turret, if it has the style that is selected as a class, add it to the possTurrets array. For each turret, also add to the element two parents above
@@ -241,6 +241,7 @@ function turretSelection(name, value) {
     });
 }
 
+// Small function to reload images on radio button click
 function radioSelection(name, value) {
     var base = name.split("-")[0];
     var selection = $('.' + base + '.selection-list-option.active').first();
@@ -251,6 +252,7 @@ function radioSelection(name, value) {
     }
 }
 
+// Fills review section with content
 function reviewFill() {
     var reviewSpans = [];
     var spanIds = [];
@@ -261,7 +263,6 @@ function reviewFill() {
             spanIds.push(spans[i].dataset.id);
         }
     }
-    console.log(spanIds);
     var dataIds = [];
     for (i = 0; i < spanIds.length; i++) {
         var selection = document.getElementsByClassName(`${spanIds[i]} selection-list-option active`)[0];
@@ -339,7 +340,12 @@ function reviewFill() {
         }
         // If a section does not have a selection
         else {
-            dataIds.push("Not selected");
+            if (spanIds[i] === 'separator' & !selection) {
+                dataIds.push('Double Radius, Polished Aluminium');
+            }
+            else {
+                dataIds.push("Not selected");
+            }
         }
         // Prints the selections in a user-friendly format to the webpage
         reviewSpans[i].innerHTML = dataIds[i];

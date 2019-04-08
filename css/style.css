@@ -328,7 +328,7 @@ h3 {
     font-weight: 500;
     padding: 15px 0 15px 10px;
     font-size: large;
-    transition: background-color ease-in-out 0.15s;
+    /*transition: background-color ease-in-out 0.15s;*/
     transition: color ease-in-out 0.15s;
 }
 
@@ -340,7 +340,7 @@ h3 {
 .dropdown-menu div div a:hover {
     color: #b10000;
     background-color: #111111;
-    transition: background-color ease-in-out 0.15s;
+    /*transition: background-color ease-in-out 0.15s;*/
     transition: color ease-in-out 0.15s;
 }
 
@@ -699,11 +699,11 @@ hr {
 }
 
 #cone {
-    z-index: 2;
+    z-index: 3;
 }
 
 #numberarc {
-    z-index: 3;
+    z-index: 2;
 }
 
 #separator {
