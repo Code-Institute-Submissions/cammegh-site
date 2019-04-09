@@ -340,7 +340,7 @@ function reviewFill() {
         }
         // If a section does not have a selection
         else {
-            if (spanIds[i] === 'separator' & !selection) {
+            if (spanIds[i] === 'separator' && dataIds[3] !== 'Not selected') {
                 dataIds.push('Double Radius, Polished Aluminium');
             }
             else {
