@@ -3,7 +3,7 @@
 // there is quite a mix of the two.
 
 // Declared one constant for the root path for all pictures used by the page, and one for the empty background
-const imageBase = '../images/wheel-builder/';
+const imageBase = 'images/wheel-builder/';
 const imageBlank = `${imageBase}blank-background.png`;
 
 // This function deals with swapping actual images, by fading out the active one, swapping the src and fading back in
